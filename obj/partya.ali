@@ -1,0 +1,145 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U partya%b		partya.adb		ceb5bcb1 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system%s		system.ads		system.ali
+Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U partya%s		partya.ads		5555e375 EE NE OO PK
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-inteio.ads		20190518041258 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
+D a-numeri.ads		20190518041256 bb51c45a ada.numerics%s
+D a-nudira.ads		20190518041256 71e55def ada.numerics.discrete_random%s
+D a-nudira.adb		20190518041256 72908cdb ada.numerics.discrete_random%b
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
+D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
+D partya.ads		20200310232526 5555e375 partya%s
+D partya.adb		20200406150952 b2ba5ee2 partya%b
+D system.ads		20190518041258 32a08138 system%s
+D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
+D s-imguns.ads		20190518041256 9ff43cf7 system.img_uns%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-rannum.ads		20190518041256 99ade2f2 system.random_numbers%s
+D s-rannum.adb		20190518041258 20ba1217 system.random_numbers%b
+D s-ransee.ads		20190518041258 01a57b33 system.random_seed%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+D s-valuns.ads		20190518041258 35067db9 system.val_uns%s
+D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [getx partya 11 13 none]
+G c Z s b [gety partya 13 13 none]
+G c Z s b [aofx partya 15 13 none]
+G c Z s b [aofy partya 17 13 none]
+G c Z s b [generatex partya 19 13 none]
+G c Z s b [generatey partya 21 13 none]
+G c Z s b [oblivioust partya 23 13 none]
+G c Z s b [sequences partya 24 13 none]
+G c Z s b [sequencet partya 25 13 none]
+G c Z s s [xy_arrayIP partya 9 9 none]
+G c Z b b [randoma partya 11 10 none]
+X 1 ada.ads
+16K9*Ada 20e8 16|2r6 3r5 4r6 4r31 5r6 12r28
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[11|46] 16|4w10 4r35
+X 5 a-numeri.ads
+16K13*Numerics 32e17 16|5r10 12r32
+X 6 a-nudira.ads
+44k22*Discrete_Random 75e33 16|5w19 12r41
+50R9 Generator<23|63R9> 16|13r20[12]
+52V13 Random{integer} 16|17s20[12]
+55U14 Reset<23|100p14> 16|16s13[12]
+X 7 a-nudira.adb
+53V16 Random[23|83]{integer} 24|392b13[16|12]
+X 10 a-textio.ads
+57K13*Text_IO 727e16 16|2w10 3r9
+264U14*New_Line 16|76s10
+508U14*Put_Line 16|33s7 62s10 74s10
+X 11 a-tiinio.ads
+59U14*Get 16|26s7[3|18] 34s7[3|18]
+80U14*Put 16|63s10[3|18] 75s10[3|18]
+X 13 interfac.ads
+74M9*Unsigned_32
+77M9*Unsigned_64
+X 15 partya.ads
+3K9*PartyA 26l5 26e11 16|7b14 109l5 109t11
+7I12*Rand_Range{integer} 23r47 24r27 25r27 16|12r57 14r10 82r47 94r27 101r28
+8I12*m{integer} 16|42r23 51r22 58r23 70r23 95r22 102r22
+9A9*XY_array(integer)<integer> 15r25 17r25 19r44 21r44 23r33 24r46 25r46
+. 16|41r25 42r14 50r25 51r13 57r44 58r13 69r43 70r13 82r33 83r13 94r46 95r13
+. 101r47 102r13
+11V13*getX{integer} 16|23b10 28l8 28t12
+13V13*getY{integer} 16|30b13 37l8 37t12
+15V13*aofX{9A9} 16|41b13 48l8 48t12 61s24
+17V13*aofY{9A9} 16|50b13 55l8 55t12 73s24
+19V13*GenerateX{9A9} 19>24 16|57b13 67l8 67t17
+19i24 X{integer} 16|57b24 61r20
+21V13*GenerateY{9A9} 21>24 16|69b13 80l8 80t17
+21i24 Y{integer} 16|69b23 73r20
+23V13*ObliviousT{integer} 23>25 23>43 23>60 23>75 16|82b13 92l8 92t18
+23a25 XYarr{9A9} 16|82b25 86r16 87r17
+23i43 R{7I12} 16|82b43 87r38
+23i60 X2{integer} 16|82b60 87r28
+23i75 A{integer} 16|82b75 91r18
+24V13*SequenceS{9A9} 24>23 16|94b13 99l8 99t17
+24i23 A{7I12} 16|94b23 97r20
+25V13*SequenceT{9A9} 25>23 16|101b14 106l8 106t17
+25i23 A{7I12} 16|101b24 104r20
+X 16 partya.adb
+11V10 RandomA{integer} 11b10 21l6 21t13 45s20 61s34
+12K12 Rand_Int[6|44] 13r11 16r4 17r11
+13r4 seed{6|50R9[12]} 16r19 17r27
+14i4 Num{15|7I12} 17m4 20r11
+24i7 x1{integer} 26m12 27r11
+31i7 y1{integer} 34m11 36r14
+42a7 Arr{15|9A9} 44r16 45m10 47r14
+44i11 I{integer} 45r14
+51a7 Arr{15|9A9} 53m7 54r14
+58a7 Arr{15|9A9} 60r16 61m10 63r14 66r14
+60i11 I{integer} 61r14 61r29 63r18
+70a7 Arr{15|9A9} 72r16 73m10 75r14 79r14
+72i11 I{integer} 73r14 73r29 75r18
+83a7 Arr{15|9A9} 88m10 91r14
+84i7 T{integer} 87m10 88r20
+86i11 I{integer} 87r23 88r14
+95a7 Arr{15|9A9} 97m7 98r14
+102a7 Arr{15|9A9} 104m7 105r14
+X 23 s-rannum.ads
+75V13*Random{13|74M9} 24|221i21
+76V13*Random{13|77M9} 24|221i21
+

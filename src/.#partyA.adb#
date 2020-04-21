@@ -1,0 +1,109 @@
+
+with Ada.Text_Io;
+use Ada.Text_Io;
+with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
+with Ada.Numerics.discrete_Random;
+
+package body PartyA
+
+is
+
+function RandomA return Integer is
+   package Rand_Int is new ada.numerics.discrete_random(Rand_Range);
+   seed : Rand_Int.Generator;
+   Num : Rand_Range;
+begin
+   Rand_Int.Reset(seed);
+   Num := Rand_Int.Random(seed);
+
+
+   return Num;
+ end RandomA;
+
+Function getX return Integer is
+      x1 : Integer;
+   begin
+      Get (x1);
+   return x1;
+   end getX;
+
+   Function getY return Integer is
+      y1 : Integer;
+   begin
+      Put_Line ("Input y Coordinate");
+      Get(y1);
+
+      return y1;
+   end getY;
+
+
+
+   function aofX return XY_array is
+      Arr :  XY_array(m) ;
+   begin
+      for I in Arr'Range loop
+         Arr(I) := RandomA;
+      end loop;
+      return Arr;
+   end aofX;
+
+   function aofY return XY_array is
+      Arr : XY_array(m) ;
+   begin
+      Arr := (9,11,18);
+      return Arr;
+   end aofY;
+
+   function GenerateX (X : Integer) return XY_array is
+      Arr : XY_array (m);
+   begin
+      for I in Arr'Range loop
+         Arr(I) := X + aofX(I) + RandomA;
+         Put_Line("Generate X result");
+         Put(Arr(I));
+      end loop;
+
+      return Arr;
+   end GenerateX;
+
+   function GenerateY(Y : Integer) return XY_array is
+      Arr : XY_array (m);
+   begin
+      for I in Arr'Range loop
+         Arr(I) := Y + aofY(I);
+         Put_Line("Generate Y result");
+         Put(Arr(I));
+         New_Line;
+      end loop;
+
+      return Arr;
+   end GenerateY;
+
+   function ObliviousT (XYarr : XY_array; R : Rand_Range ; X2 : Integer ; A : Integer) return Integer is
+      Arr : XY_array (0..2);
+      T : Integer := 0;
+      begin
+      for I in XYarr'Range loop
+         T := ((XYarr(I) - X2)**2) + R;
+         Arr(I) := T;
+      end loop;
+
+      return Arr(A);
+   end ObliviousT;
+
+   function SequenceS(A : Rand_Range) return XY_array is
+      Arr : XY_array(m);
+   begin
+      Arr := (5,10,A);
+      return Arr;
+   end SequenceS;
+
+    function SequenceT(A : Rand_Range) return XY_array is
+      Arr : XY_array(m);
+   begin
+      Arr := (5,10,A);
+      return Arr;
+   end SequenceT;
+
+
+end PartyA;

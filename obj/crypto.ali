@@ -1,0 +1,17 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U crypto%s		crypto.ads		b0d04738 NE OO PK
+
+D crypto.ads		20180402102852 b0d04738 crypto%s
+D system.ads		20190518041258 32a08138 system%s
+G a e
+X 1 crypto.ads
+24K9*Crypto 25l5 25e11
+

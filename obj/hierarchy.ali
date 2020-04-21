@@ -1,0 +1,92 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U hierarchy%b		hierarchy.adb		d43e0574 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U hierarchy%s		hierarchy.ads		3218affb EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D hierarchy.ads		20190430045734 3218affb hierarchy%s
+D hierarchy.adb		20190430045734 01c907ff hierarchy%b
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
+D system.ads		20190518041258 32a08138 system%s
+D s-conca2.ads		20190518041256 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
+D s-imgint.ads		20190518041256 02dbe0c2 system.img_int%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041256 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20190518041256 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [print hierarchy 10 14 none]
+G c Z s s [baseDA hierarchy 6 9 none]
+G c Z s s [baseDF hierarchy 6 9 none]
+G c Z s s [baseIP hierarchy 6 9 none]
+G c Z s b [print hierarchy 16 14 none]
+G c Z s s [childDA hierarchy 12 9 none]
+G c Z s s [childDF hierarchy 12 9 none]
+G c Z s s [childIP hierarchy 12 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 9|1r6 1r24 2r6 2r24
+X 5 a-tags.ads
+69K13*Tags 621e13 9|2w10 2r28
+86V13*External_Tag{string} 9|17s17
+X 6 a-textio.ads
+57K13*Text_IO 727e16 9|1w10 1r28
+508U14*Put_Line 9|16s7 18s7 31s7
+X 8 hierarchy.ads
+1K9*Hierarchy 18l5 18e14 9|4b14 34l5 34t14
+6R9*Base 8e14 10p14 10r28 12r22 9|10r28 17r31 29r14
+7i7*Priority{natural} 9|18r39
+10U14*Print 10>21 9|10b14 19l8 19t13 29s7
+10r21 This{6R9} 9|10b21 17r43 18r34
+12R9*Child<6R9> 14e14 16P14 16r28 9|25r28
+13e7*Value{character} 9|31r37
+16U14*Print<10p14> 16>21 9|25b14 32l8 32t13
+16r21 This{12R9} 9|25b21 29r20 31r32
+

@@ -1,0 +1,222 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_STREAMS
+RV NO_TASKING
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RV MAX_TASK_ENTRIES=2
+RV MAX_TASKS=1
+
+U server%b		server.adb		558c7ee3 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W alice%s		alice.adb		alice.ali
+W bob%s			bob.adb			bob.ali  AD
+W common%s		common.ads		common.ali
+W crypto%s		crypto.ads		crypto.ali
+W crypto.types%s	crypto-types.adb	crypto-types.ali
+W crypto.types.big_numbers%s  crypto-types-big_numbers.adb  crypto-types-big_numbers.ali  EA
+W gnat%s		gnat.ads		gnat.ali
+W gnat.sockets%s	g-socket.adb		g-socket.ali
+W ot%s			ot.adb			ot.ali  AD
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+U server%s		server.ads		0d6e03da EE OO PK
+Z ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.parameters%s	s-parame.adb		s-parame.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-charac.ads		20190518041256 2d3ec45b ada.characters%s
+D a-chlat1.ads		20190518041256 66457d31 ada.characters.latin_1%s
+D a-comlin.ads		20190518041256 4aa66568 ada.command_line%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041256 bf4f806b ada.finalization%s
+D a-inteio.ads		20190518041258 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20190518041258 0240fc73 ada.real_time%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-string.ads		20190518041256 90ac6797 ada.strings%s
+D a-strmap.ads		20190518041256 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20190518041256 1656705b ada.strings.unbounded%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
+D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20190518041256 eff36322 ada.unchecked_deallocation%s
+D alice.ads		20200420201752 0bc6388d alice%s
+D bob.ads		20200421135028 9839b8a0 bob%s
+D common.ads		20200421125056 fd208fab common%s
+D crypto.ads		20180402102852 b0d04738 crypto%s
+D crypto-asymmetric.ads	20180402102852 696c0cdb crypto.asymmetric%s
+D crypto-asymmetric-prime_tables.ads  20180402102852 15dc4267 crypto.asymmetric.prime_tables%s
+D crypto-types.ads	20180402102852 d664f69b crypto.types%s
+D crypto-types-big_numbers.ads  20200419115034 19da6856 crypto.types.big_numbers%s
+D crypto-types-big_numbers.adb  20180402102852 c76327b4 crypto.types.big_numbers%b
+D crypto-types-big_numbers-binfield_utils.adb  20180402102852 b57579c3 crypto.types.big_numbers.binfield_utils
+D crypto-types-big_numbers-mod_utils.adb  20180402102852 1867e53d crypto.types.big_numbers.mod_utils
+D crypto-types-big_numbers-utils.adb  20180402102852 e464a485 crypto.types.big_numbers.utils
+D crypto-types-random.ads  20180402102852 ab47ec7a crypto.types.random%s
+D crypto-types-random_source.ads  20180402102852 585cda1d crypto.types.random_source%s
+D gnat.ads		20190518041258 b5988c27 gnat%s
+D g-socket.ads		20190518041258 605fb491 gnat.sockets%s
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D i-c.ads		20190518041256 5421119b interfaces.c%s
+D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
+D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
+D ot.ads		20200421134950 75570516 ot%s
+D server.ads		20200417102104 0d6e03da server%s
+D server.adb		20200421211802 860247a2 server%b
+D system.ads		20190518041258 32a08138 system%s
+D s-atacco.ads		20190518041258 4c36d12f system.address_to_access_conversions%s
+D s-atocou.ads		20190518041258 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
+D s-finmas.ads		20190518041256 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041258 4ff27390 system.finalization_root%s
+D s-multip.ads		20190518041256 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20190518135108 3e023549 system.os_constants%s
+D s-osinte.ads		20190518041258 97504df8 system.os_interface%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-pooglo.ads		20190518041256 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stausa.ads		20190518041256 017a0a05 system.stack_usage%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20190518041256 b16154c2 system.storage_pools%s
+D s-stposu.ads		20190518041256 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20190518041256 aedef97e system.stream_attributes%s
+D s-tasinf.ads		20190518041258 601f6b72 system.task_info%s
+D s-taspri.ads		20190518041258 6c1d93d4 system.task_primitives%s
+D s-taprop.ads		20190518041258 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20190518041258 b9d612e2 system.tasking%s
+D s-taprob.ads		20190518041258 acd6094d system.tasking.protected_objects%s
+D s-tpoben.ads		20190518041258 60ad3dae system.tasking.protected_objects.entries%s
+D s-tasren.ads		20190518041258 a67a9949 system.tasking.rendezvous%s
+D s-tassta.ads		20190518041258 cca55c94 system.tasking.stages%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+D s-win32.ads		20190518041256 90ecf4e6 system.win32%s
+G a e
+G c b b b [b server 10 1 none]
+G c Z s b [workerTK server 4 9 none]
+G c Z s b [start server__worker 5 13 none]
+G c Z s b [done server__worker 7 13 none]
+G c Z s s [workerTKVIP server 4 4 none]
+G r c none [b server 10 1 none] [getx2 bob 9 13 none]
+G r c none [b server 10 1 none] [computet bob 11 13 none]
+G r c none [b server 10 1 none] [computec ot 19 13 none]
+G r c none [b server 10 1 none] [gety2 bob 10 13 none]
+G r c none [start server__worker 5 13 none] [getx2 bob 9 13 none]
+G r c none [start server__worker 5 13 none] [computet bob 11 13 none]
+G r c none [start server__worker 5 13 none] [computec ot 19 13 none]
+G r c none [start server__worker 5 13 none] [gety2 bob 10 13 none]
+G r c none [done server__worker 7 13 none] [getx2 bob 9 13 none]
+G r c none [done server__worker 7 13 none] [computet bob 11 13 none]
+G r c none [done server__worker 7 13 none] [computec ot 19 13 none]
+G r c none [done server__worker 7 13 none] [gety2 bob 10 13 none]
+G r c none [workerTK server 4 9 none] [getx2 bob 9 13 none]
+G r c none [workerTK server 4 9 none] [computet bob 11 13 none]
+G r c none [workerTK server 4 9 none] [computec ot 19 13 none]
+G r c none [workerTK server 4 9 none] [gety2 bob 10 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 41|2r6 2r24 4r6 4r31 7r6 7r19
+X 4 a-comlin.ads
+36K13*Command_Line 144e21 41|7w23
+X 7 a-inteio.ads
+18K13*Integer_Text_IO[16|46] 41|4w10 4r35
+X 15 a-textio.ads
+57K13*Text_IO 727e16 41|2w10 2r28 7w10
+508U14*Put_Line 41|53s7 68s7
+X 19 alice.ads
+3K9*Alice 25e10 41|6w17 6r37
+X 20 bob.ads
+3K9*Bob 13e8 41|6w24 6r44 54r13 60r47 69r13 73r47
+9V13*GetX2{integer} 41|54s17
+10V13*GetY2{integer} 41|69s17
+11V13*ComputeT{39|16A9} 41|60s51 73s51
+X 21 common.ads
+4K9*Common 14e11 41|6w6 6r49 31r23
+8I12*m{integer} 41|22r23 23r23
+9A9*XY_array(integer)<integer> 41|22r14 23r14 50r15 65r15
+12N4*Port 41|31r30
+X 22 crypto.ads
+24K9*Crypto 25e11 41|7r37
+X 25 crypto-types.ads
+23K16*Types 357e17 41|7r44
+X 26 crypto-types-big_numbers.ads
+39k22*Big_Numbers 399e29 41|7w50 8r35
+41R9*Big_Unsigned 41|18r14[39|8] 19r14[39|8] 57r16[39|8]
+X 33 gnat.ads
+34K9*GNAT 57e9 41|3r6 3r24
+X 34 g-socket.ads
+55K14*Sockets 1555e17 41|3w11 3r29
+412I9*Socket_Type<integer> 41|14r17 15r17
+493I9*Port_Type<integer>
+598R9*Sock_Addr_Type 601e14 41|13r17
+599r7*Addr{518R9} 41|30m15
+600i7*Port{493I9} 41|31m15
+649V13*Addresses{518R9} 41|30s23
+666V13*Get_Host_By_Name{632R9} 41|30s34
+672V13*Host_Name{string} 41|30s52
+1091U14*Create_Socket 41|33s7
+1098U14*Accept_Socket 41|41s7
+1123U14*Bind_Socket 41|35s7
+1176U14*Listen_Socket 41|37s7
+1296P9*Stream_Access(10|39R9) 41|16r17
+1299V13*Stream{1296P9} 41|45s18
+X 39 ot.ads
+4K9*OT 24e7 41|6w13 6r33
+8K12*LN[26|39] 41|18r11 19r11 57r13
+14A9*TwoDArray(26|41R9[8])<integer><integer> 41|60r7 73r7
+16A9*ArrUnsigned(26|41R9[8])<integer>
+19V13*ComputeC{14A9} 41|60s35 73s35
+X 40 server.ads
+2K9*Server 11l5 11e11 41|10b14 77l5 77t11
+4t9*Worker 41|12b14 74l8 74t14
+5Y13 Start 41|27b14
+7Y13 Done 41|39b14
+X 41 server.adb
+13r7 Address{34|598R9} 30m7 31m7 35r28 41m38
+14i7 Socket{34|412I9} 41m30 45r26
+15i7 Server{34|412I9} 33m22 35r20 37r22 41r22
+16p7 Channel{34|1296P9} 45m7 50r31 57r36 60r25 65r31 73r25
+18r7 C{26|41R9[39|8]} 57m7 60r44 73r44
+19r7 D{26|41R9[39|8]}
+20i7 X2{integer} 54m7 60r70
+21i7 Y2{integer} 69m7 73r70
+22a7 Xarr{21|9A9} 50m7 60r60
+23a7 Yarr{21|9A9} 65m7 73r60
+X 58 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+

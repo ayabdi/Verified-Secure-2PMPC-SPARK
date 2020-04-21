@@ -1,0 +1,40 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\Chels\FinalYrPr\securempcspark.gpr
+20200419201208
+[BOUND OBJECT FILES]
+C:\Users\Chels\FinalYrPr\obj\crypto.o
+C:\Users\Chels\FinalYrPr\obj\crypto-asymmetric.o
+C:\Users\Chels\FinalYrPr\obj\crypto-types.o
+C:\Users\Chels\FinalYrPr\obj\crypto-asymmetric-prime_tables.o
+C:\Users\Chels\FinalYrPr\obj\crypto-types-random_source.o
+C:\Users\Chels\FinalYrPr\obj\crypto-types-random_source-provider.o
+C:\Users\Chels\FinalYrPr\obj\crypto-types-random.o
+C:\Users\Chels\FinalYrPr\obj\crypto-types-big_numbers.o
+C:\Users\Chels\FinalYrPr\obj\common.o
+C:\Users\Chels\FinalYrPr\obj\Alice.o
+C:\Users\Chels\FinalYrPr\obj\OT.o
+C:\Users\Chels\FinalYrPr\obj\client.o
+C:\Users\Chels\FinalYrPr\obj\random.o
+C:\Users\Chels\FinalYrPr\obj\Bob.o
+C:\Users\Chels\FinalYrPr\obj\server.o
+C:\Users\Chels\FinalYrPr\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\Chels\FinalYrPr\obj\
+-LC:\Users\Chels\FinalYrPr\obj\
+-LC:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
+-static
+-static-libgcc
+-ladvapi32
+-lkernel32
+C:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/libgnarl.a
+C:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/libgnat.a
+-lws2_32
+-Xlinker
+--stack=0x200000,0x1000
+-mthreads

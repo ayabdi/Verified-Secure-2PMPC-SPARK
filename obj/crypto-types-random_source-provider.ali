@@ -1,0 +1,190 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FINALIZATION
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U crypto.types.random_source.provider%b  crypto-types-random_source-provider.adb  f7790a87 OO PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W crypto.types.random_source%s  crypto-types-random_source.adb  crypto-types-random_source.ali
+Z system%s		system.ads		system.ali
+
+U crypto.types.random_source.provider%s  crypto-types-random_source-provider.ads  5a3dca6e EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W crypto.types.random_source%s  crypto-types-random_source.adb  crypto-types-random_source.ali
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+L "-ladvapi32"
+L "-lkernel32"
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041256 bf4f806b ada.finalization%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D crypto.ads		20180402102852 b0d04738 crypto%s
+D crypto-types.ads	20180402102852 d664f69b crypto.types%s
+D crypto-types-random_source.ads  20180402102852 585cda1d crypto.types.random_source%s
+D crypto-types-random_source-provider.ads  20180402102852 64e080d0 crypto.types.random_source.provider%s
+D crypto-types-random_source-provider.adb  20180402102852 93998a57 crypto.types.random_source.provider%b
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D i-c.ads		20190518041256 5421119b interfaces.c%s
+D system.ads		20190518041258 32a08138 system%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-finmas.ads		20190518041256 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041258 4ff27390 system.finalization_root%s
+D s-memory.ads		20190518041256 597d6634 system.memory%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-pooglo.ads		20190518041256 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stalib.adb		20190518041256 f2fe2716 system.standard_library%b
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041256 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20190518041256 b16154c2 system.storage_pools%s
+D s-stposu.ads		20190518041256 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20190518041256 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [initialize crypto__types__random_source__provider 13 14 none]
+G c Z s b [initialize crypto__types__random_source__provider 16 14 none]
+G c Z s b [read crypto__types__random_source__provider 19 14 none]
+G c Z s b [read crypto__types__random_source__provider 22 14 none]
+G c Z s b [read crypto__types__random_source__provider 25 14 none]
+G c Z s b [read crypto__types__random_source__provider 28 14 none]
+G c Z s b [read crypto__types__random_source__provider 31 14 none]
+G c Z s b [read crypto__types__random_source__provider 34 14 none]
+G c Z s b [read crypto__types__random_source__provider 37 14 none]
+G c Z s b [finalize crypto__types__random_source__provider 40 14 none]
+G c Z s s [cryptacquirecontext crypto__types__random_source__provider 60 13 none]
+G c Z s s [cryptgenrandom crypto__types__random_source__provider 70 13 none]
+G c Z s s [cryptreleasecontext crypto__types__random_source__provider 78 13 none]
+G c Z s s [getlasterror crypto__types__random_source__provider 85 13 none]
+G c Z s b [ignore crypto__types__random_source__provider 88 14 none]
+G c Z s b [assert crypto__types__random_source__provider 89 14 none]
+G c Z s s [random_source_providerDA crypto__types__random_source__provider 52 9 none]
+G c Z s s [random_source_providerDF crypto__types__random_source__provider 52 9 none]
+G c Z s s [random_source_providerIP crypto__types__random_source__provider 52 9 none]
+G r s random_source [random_source_providerIP crypto__types__random_source__provider 52 9 none] [random_sourceIP crypto__types__random_source 7 8 none]
+X 3 a-finali.ads
+47U14*Adjust<17|42p14>
+X 7 crypto.ads
+24K9*Crypto 25e11 10|4r9 5r24 94r5 11|1r14 90r5
+X 8 crypto-types.ads
+23K16*Types 7|24k9 8|357e17 10|4r16 5r31 94r12 11|1r21 90r12
+34M9*Byte 10|19r65 11|23r65
+42M9*Word 10|28r66 11|45r65
+45M9*DWord 10|34r66 11|59r65
+54A9*Bytes(34M9)<integer> 10|22r75 11|27r74
+56A9*Words(42M9)<integer> 10|31r75 11|50r74
+57A9*DWords(45M9)<integer> 10|37r76 11|64r75
+80A9*B_Block128(34M9)<integer> 10|25r66 11|36r65
+X 9 crypto-types-random_source.ads
+3K22*Random_Source 8|23k16 9|27e31 10|4r22 5r37 94r18 11|1r27 90r18
+7H8*Random_Source<3|43R9> 7e69 10|7r43 52r43
+X 10 crypto-types-random_source-provider.ads
+4K36*Provider 9|3k22 10|52E9 94l32 94e40 11|1b41 90l32 90t40
+5K12*Rnd=5:37 7r39 52r39
+7R9*Random_Source_Provider<9|7R8> 3|47P14 10|13p14 13r40 16P14 16r40 19P14
+. 19r33 22P14 22r34 25P14 25r34 28P14 28r34 31P14 31r34 34P14 34r34 37P14
+. 37r34 40P14 40r39 52c9 53e42 11|7r39 14r40 23r33 27r33 36r33 45r33 50r33
+. 59r33 64r33 73r38
+13U14*Initialize 13=26 13>64 11|7b14 12l9 12t19 16s7
+13r26 This{7R9} 11|7b25 9m39 9r39 11m36 11r36
+13a64 Name{wide_string} 11|7b63 9r60 11r57
+16U14*Initialize<9|12p13> 16=26 11|14b15 17l9 17t19
+16r26 This{7R9} 11|14b26 16m19
+19U14*Read<9|14p13> 19=19 19<57 11|23b14 25l8 25t12
+19r19 This{7R9} 11|23b19 24r31
+19m57 B{8|34M9} 11|23b57 24m47 24r47
+22U14*Read<9|16p13> 22=20 22<58 11|27b14 30l8 30t12
+22r20 This{7R9} 11|27b19 29r31
+22a58 Byte_Array{8|54A9} 11|27b57 29r44 29m63 29r63
+25U14*Read<9|18p13> 25=20 25<58 11|36b14 39l8 39t12
+25r20 This{7R9} 11|36b19 38r31
+25a58 B{8|80A9} 11|36b57 38r44 38m54 38r54
+28U14*Read<9|20p13> 28=20 28<58 11|45b14 48l8 48t12
+28r20 This{7R9} 11|45b19 47r31
+28m58 W{8|42M9} 11|45b57 47m47 47r47
+31U14*Read<9|21p13> 31=20 31<58 11|50b14 53l8 53t12
+31r20 This{7R9} 11|50b19 52r31
+31a58 Word_Array{8|56A9} 11|50b57 52r48 52m67 52r67
+34U14*Read<9|23p13> 34=20 34<58 11|59b14 62l8 62t12
+34r20 This{7R9} 11|59b19 61r31
+34m58 D{8|45M9} 11|59b57 61m47 61r47
+37U14*Read<9|24p13> 37=20 37<58 11|64b14 67l8 67t12
+37r20 This{7R9} 11|64b19 66r31
+37a58 DWord_Array{8|57A9} 11|64b57 66r48 66m68 66r68
+40U14*Finalize<3|48p14> 40=24 11|73b14 76l8 76t16
+40r24 This{7R9} 11|73b23 75r35
+46X4*Windows_Crypto_Failure 11|10r52
+53m14 Handle{14|67M9} 11|9m44 11m41 24r36 29r36 38r36 47r36 52r36 61r36 66r36
+. 75r40
+55m4 PROV_RSA_FULL{13|45M9} 11|9r77 11r74
+56m4 CRYPT_NEWKEYSET{13|45M9} 11|11r89
+57m4 NTE_BAD_KEYSET{13|45M9} 11|10r26
+60V13 CryptAcquireContext{13|35I9} 61>7 62>7 63>7 64>7 65>7 11|9s18 11s15
+61m7 phProv{14|67M9}
+62m7 pszContainer{14|67M9}
+63m7 pszProvider{13|45M9}
+64m7 dwProvType{13|45M9}
+65m7 dwFlags{13|45M9}
+70V13 CryptGenRandom{13|35I9} 71>7 72>7 73>7 11|24s15 29s15 38s15 47s15 52s15
+. 61s15 66s15
+71m7 hProv{14|67M9}
+72m7 wLen{13|45M9}
+73m7 pbBuffer{14|67M9}
+78V13 CryptReleaseContext{13|35I9} 79>7 80>7 11|75s15
+79m7 hProv{14|67M9}
+80m7 dwFlags{13|45M9}
+85V13 GetLastError{13|45M9} 11|10s10
+88U14 Ignore 88>22 11|11s7 24s7 29s7 38s7 47s7 52s7 61s7 66s7 75s7 82b14
+. 82l58 82t64
+88i22 C_Succeeded{13|35I9} 11|82b21
+89V14 Assert{boolean} 89>22 11|9s10 88b13 88l91 88t97
+89i22 C_Succeeded{13|35I9} 11|88b20 88r69
+X 12 interfac.ads
+38K9*Interfaces 10|2r6 2r24 12|184e15
+X 13 i-c.ads
+18K20*C 10|2w17 2r35 13|230e17
+35I9*int<integer> 10|66r11 74r11 81r11 88r35 89r35 11|82r34 88r33
+45M9*unsigned_long 10|55r31 56r31 57r31 63r25 64r25 65r25 72r21 80r20 85r33
+X 14 system.ads
+37K9*System 10|1w6 1r18 14|200e11
+67M9*Address 10|53r23 61r25 62r25 71r21 73r21 79r20
+X 18 s-memory.ads
+53V13*Alloc{14|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{14|67M9} 105i<c,__gnat_realloc>22
+X 25 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+
