@@ -52,7 +52,7 @@ D crypto.ads		20180402102852 b0d04738 crypto%s
 D crypto-asymmetric.ads	20180402102852 696c0cdb crypto.asymmetric%s
 D crypto-asymmetric-prime_tables.ads  20180402102852 15dc4267 crypto.asymmetric.prime_tables%s
 D crypto-types.ads	20180402102852 d664f69b crypto.types%s
-D crypto-types-big_numbers.ads  20200419115034 19da6856 crypto.types.big_numbers%s
+D crypto-types-big_numbers.ads  20180402102852 19da6856 crypto.types.big_numbers%s
 D crypto-types-big_numbers.adb  20180402102852 c76327b4 crypto.types.big_numbers%b
 D crypto-types-big_numbers-binfield_utils.adb  20180402102852 b57579c3 crypto.types.big_numbers.binfield_utils
 D crypto-types-big_numbers-mod_utils.adb  20180402102852 1867e53d crypto.types.big_numbers.mod_utils

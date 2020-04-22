@@ -32,15 +32,15 @@ package body ada_main is
    E114 : Short_Integer; pragma Import (Ada, E114, "system__finalization_root_E");
    E112 : Short_Integer; pragma Import (Ada, E112, "ada__finalization_E");
    E111 : Short_Integer; pragma Import (Ada, E111, "system__file_io_E");
-   E174 : Short_Integer; pragma Import (Ada, E174, "system__storage_pools_E");
-   E170 : Short_Integer; pragma Import (Ada, E170, "system__finalization_masters_E");
-   E168 : Short_Integer; pragma Import (Ada, E168, "system__storage_pools__subpools_E");
-   E160 : Short_Integer; pragma Import (Ada, E160, "ada__strings__unbounded_E");
+   E176 : Short_Integer; pragma Import (Ada, E176, "system__storage_pools_E");
+   E172 : Short_Integer; pragma Import (Ada, E172, "system__finalization_masters_E");
+   E170 : Short_Integer; pragma Import (Ada, E170, "system__storage_pools__subpools_E");
+   E162 : Short_Integer; pragma Import (Ada, E162, "ada__strings__unbounded_E");
    E212 : Short_Integer; pragma Import (Ada, E212, "system__task_info_E");
    E144 : Short_Integer; pragma Import (Ada, E144, "ada__calendar_E");
    E196 : Short_Integer; pragma Import (Ada, E196, "ada__real_time_E");
    E099 : Short_Integer; pragma Import (Ada, E099, "ada__text_io_E");
-   E188 : Short_Integer; pragma Import (Ada, E188, "system__pool_global_E");
+   E190 : Short_Integer; pragma Import (Ada, E190, "system__pool_global_E");
    E260 : Short_Integer; pragma Import (Ada, E260, "system__pool_size_E");
    E251 : Short_Integer; pragma Import (Ada, E251, "gnat__sockets_E");
    E256 : Short_Integer; pragma Import (Ada, E256, "gnat__sockets__thin_common_E");
@@ -51,13 +51,13 @@ package body ada_main is
    E240 : Short_Integer; pragma Import (Ada, E240, "system__tasking__protected_objects__entries_E");
    E244 : Short_Integer; pragma Import (Ada, E244, "system__tasking__queuing_E");
    E248 : Short_Integer; pragma Import (Ada, E248, "system__tasking__stages_E");
-   E181 : Short_Integer; pragma Import (Ada, E181, "crypto__asymmetric_E");
-   E155 : Short_Integer; pragma Import (Ada, E155, "crypto__types_E");
-   E186 : Short_Integer; pragma Import (Ada, E186, "crypto__types__random_source_E");
-   E192 : Short_Integer; pragma Import (Ada, E192, "crypto__types__random_source__provider_E");
-   E184 : Short_Integer; pragma Import (Ada, E184, "crypto__types__random_E");
-   E158 : Short_Integer; pragma Import (Ada, E158, "crypto__types__big_numbers_E");
-   E194 : Short_Integer; pragma Import (Ada, E194, "ot_E");
+   E183 : Short_Integer; pragma Import (Ada, E183, "crypto__asymmetric_E");
+   E157 : Short_Integer; pragma Import (Ada, E157, "crypto__types_E");
+   E188 : Short_Integer; pragma Import (Ada, E188, "crypto__types__random_source_E");
+   E194 : Short_Integer; pragma Import (Ada, E194, "crypto__types__random_source__provider_E");
+   E186 : Short_Integer; pragma Import (Ada, E186, "crypto__types__random_E");
+   E160 : Short_Integer; pragma Import (Ada, E160, "crypto__types__big_numbers_E");
+   E152 : Short_Integer; pragma Import (Ada, E152, "ot_E");
    E137 : Short_Integer; pragma Import (Ada, E137, "alice_E");
    E135 : Short_Integer; pragma Import (Ada, E135, "client_E");
    E267 : Short_Integer; pragma Import (Ada, E267, "random_E");
@@ -77,17 +77,17 @@ package body ada_main is
          procedure F1;
          pragma Import (Ada, F1, "crypto__types__random__finalize_body");
       begin
-         E184 := E184 - 1;
+         E186 := E186 - 1;
          F1;
       end;
-      E192 := E192 - 1;
+      E194 := E194 - 1;
       declare
          procedure F2;
          pragma Import (Ada, F2, "crypto__types__random_source__provider__finalize_spec");
       begin
          F2;
       end;
-      E186 := E186 - 1;
+      E188 := E188 - 1;
       declare
          procedure F3;
          pragma Import (Ada, F3, "crypto__types__random_source__finalize_spec");
@@ -121,7 +121,7 @@ package body ada_main is
       begin
          F7;
       end;
-      E188 := E188 - 1;
+      E190 := E190 - 1;
       declare
          procedure F8;
          pragma Import (Ada, F8, "system__pool_global__finalize_spec");
@@ -135,21 +135,21 @@ package body ada_main is
       begin
          F9;
       end;
-      E160 := E160 - 1;
+      E162 := E162 - 1;
       declare
          procedure F10;
          pragma Import (Ada, F10, "ada__strings__unbounded__finalize_spec");
       begin
          F10;
       end;
-      E168 := E168 - 1;
+      E170 := E170 - 1;
       declare
          procedure F11;
          pragma Import (Ada, F11, "system__storage_pools__subpools__finalize_spec");
       begin
          F11;
       end;
-      E170 := E170 - 1;
+      E172 := E172 - 1;
       declare
          procedure F12;
          pragma Import (Ada, F12, "system__finalization_masters__finalize_spec");
@@ -344,14 +344,14 @@ package body ada_main is
       System.File_Io'Elab_Body;
       E111 := E111 + 1;
       System.Storage_Pools'Elab_Spec;
-      E174 := E174 + 1;
+      E176 := E176 + 1;
       System.Finalization_Masters'Elab_Spec;
       System.Finalization_Masters'Elab_Body;
-      E170 := E170 + 1;
+      E172 := E172 + 1;
       System.Storage_Pools.Subpools'Elab_Spec;
-      E168 := E168 + 1;
+      E170 := E170 + 1;
       Ada.Strings.Unbounded'Elab_Spec;
-      E160 := E160 + 1;
+      E162 := E162 + 1;
       System.Task_Info'Elab_Spec;
       E212 := E212 + 1;
       Ada.Calendar'Elab_Spec;
@@ -364,7 +364,7 @@ package body ada_main is
       Ada.Text_Io'Elab_Body;
       E099 := E099 + 1;
       System.Pool_Global'Elab_Spec;
-      E188 := E188 + 1;
+      E190 := E190 + 1;
       System.Pool_Size'Elab_Spec;
       E260 := E260 + 1;
       Gnat.Sockets'Elab_Spec;
@@ -386,20 +386,20 @@ package body ada_main is
       System.Tasking.Stages'Elab_Body;
       E248 := E248 + 1;
       Crypto.Asymmetric'Elab_Spec;
-      E181 := E181 + 1;
-      E155 := E155 + 1;
+      E183 := E183 + 1;
+      E157 := E157 + 1;
       Crypto.Types.Random_Source'Elab_Spec;
-      E186 := E186 + 1;
+      E188 := E188 + 1;
       Crypto.Types.Random_Source.Provider'Elab_Spec;
       Crypto.Types.Random_Source.Provider'Elab_Body;
-      E192 := E192 + 1;
+      E194 := E194 + 1;
       Crypto.Types.Random'Elab_Body;
-      E184 := E184 + 1;
-      E158 := E158 + 1;
+      E186 := E186 + 1;
+      E160 := E160 + 1;
       OT'ELAB_SPEC;
       E137 := E137 + 1;
       OT'ELAB_BODY;
-      E194 := E194 + 1;
+      E152 := E152 + 1;
       Client'Elab_Spec;
       Client'Elab_Body;
       E135 := E135 + 1;
@@ -443,6 +443,7 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
+   --   C:\Users\Chels\FinalYrPr\obj\common.o
    --   C:\Users\Chels\FinalYrPr\obj\crypto.o
    --   C:\Users\Chels\FinalYrPr\obj\crypto-asymmetric.o
    --   C:\Users\Chels\FinalYrPr\obj\crypto-types.o
@@ -451,7 +452,6 @@ package body ada_main is
    --   C:\Users\Chels\FinalYrPr\obj\crypto-types-random_source-provider.o
    --   C:\Users\Chels\FinalYrPr\obj\crypto-types-random.o
    --   C:\Users\Chels\FinalYrPr\obj\crypto-types-big_numbers.o
-   --   C:\Users\Chels\FinalYrPr\obj\common.o
    --   C:\Users\Chels\FinalYrPr\obj\Alice.o
    --   C:\Users\Chels\FinalYrPr\obj\OT.o
    --   C:\Users\Chels\FinalYrPr\obj\client.o

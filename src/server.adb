@@ -26,24 +26,16 @@ package body Server is
    begin
       accept Start;
       --  Create socket and listen input from client
-
       Address.Addr := Addresses (Get_Host_By_Name (Host_Name), 1);
       Address.Port := Common.Port;
-
       Create_Socket (Server);
-
       Bind_Socket (Server, Address);
-
       Listen_Socket (Server);
 
       accept Done;
-
       Accept_Socket (Server, Socket, Address);
-
       --  A client has been accepted, get the stream connected to the socket
-
       Channel := Stream (Socket);
-
       -----------------------------------------------------------------------------------------------------------------------------------------
       -----------------------------------------------------------------------------------------------------------------------------------------
       -- Bob recieves Random sequence X from Alice
@@ -55,10 +47,9 @@ package body Server is
 
       -- (Oblivious Transfer)Bob recieves Y
       C :=  LN.Big_Unsigned'Input (Channel);
-      --Bob Computes C and sends it back to Y
 
+      --Bob Computes C and sends it back to Y
       TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeT(Xarr, 1 , X2)));
-      -- Put(LN.Utils.To_String(ComputeC(C, Bob.ComputeT(Alice.GenerateX(3), 1 , 4))));
 
       ----------------------------------------------------------------------------------------------------------------------------------------
      -- Bob recieves Random sequence Y from Alice
@@ -69,7 +60,6 @@ package body Server is
       Y2 := Bob.GetY2;
 
       --Bob Computes C for Y and sends it to ALice
-
       TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeT(Yarr, 1 , Y2)));
    end Worker;
 

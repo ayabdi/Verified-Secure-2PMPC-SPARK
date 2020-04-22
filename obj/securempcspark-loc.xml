@@ -1,35 +1,7 @@
 <?xml version="1.0"?>
 <Locations >
   <Project>
-    <vfs_file />
-    <file_marker column=" 45" line=" 49" >
-      <vfs_project />
-      <vfs_file>C:\Users\Chels\FinalYrPr\src\server.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 7" >
-      <vfs_project />
-      <vfs_file>C:\Users\Chels\FinalYrPr\src\OT.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 46" >
-      <vfs_project />
-      <vfs_file>C:\Users\Chels\FinalYrPr\src\server.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 7" >
-      <vfs_project />
-      <vfs_file>C:\Users\Chels\FinalYrPr\src\OT.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 43" >
-      <vfs_project />
-      <vfs_file>C:\Users\Chels\FinalYrPr\src\OT.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 7" >
-      <vfs_project />
-      <vfs_file>C:\Users\Chels\FinalYrPr\src\OT.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 71" >
-      <vfs_project />
-      <vfs_file>C:\Users\Chels\FinalYrPr\src\OT.adb</vfs_file>
-    </file_marker>
+    <vfs_file>C:\Users\Chels\FinalYrPr\securempcspark.gpr</vfs_file>
     <file_marker column=" 1" line=" 7" >
       <vfs_project />
       <vfs_file>C:\Users\Chels\FinalYrPr\src\OT.ads</vfs_file>
@@ -798,9 +770,37 @@
       <vfs_project />
       <vfs_file>C:\Users\Chels\FinalYrPr\src\server.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 4" line=" 8" >
+    <file_marker column=" 4" line=" 8" >
       <vfs_project />
       <vfs_file>C:\Users\Chels\FinalYrPr\src\OT.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 57" >
+      <vfs_project>C:\Users\Chels\FinalYrPr\securempcspark.gpr</vfs_project>
+      <vfs_file>C:\Users\Chels\FinalYrPr\src\client.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 5" >
+      <vfs_project>C:\Users\Chels\FinalYrPr\securempcspark.gpr</vfs_project>
+      <vfs_file>C:\Users\Chels\FinalYrPr\src\client.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 70" >
+      <vfs_project>C:\Users\Chels\FinalYrPr\securempcspark.gpr</vfs_project>
+      <vfs_file>C:\Users\Chels\FinalYrPr\src\client.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Chels\FinalYrPr\securempcspark.gpr</vfs_project>
+      <vfs_file>C:\Users\Chels\FinalYrPr\securempcspark.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 8" >
+      <vfs_project>C:\Users\Chels\FinalYrPr\securempcspark.gpr</vfs_project>
+      <vfs_file>C:\Users\Chels\FinalYrPr\securempcspark.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 5" >
+      <vfs_project>C:\Users\Chels\FinalYrPr\securempcspark.gpr</vfs_project>
+      <vfs_file>C:\Users\Chels\FinalYrPr\src\client.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>C:\Users\Chels\FinalYrPr\securempcspark.gpr</vfs_project>
+      <vfs_file>C:\Users\Chels\FinalYrPr\src\common.ads</vfs_file>
     </file_marker>
   </Project>
 </Locations>

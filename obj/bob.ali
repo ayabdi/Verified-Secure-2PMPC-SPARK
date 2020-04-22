@@ -26,7 +26,7 @@ W random%s		random.adb		random.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-U bob%s			bob.ads			1b880a90 EE NE OO PK
+U bob%s			bob.ads			1c96ca00 EE NE OO PK
 W alice%s		alice.adb		alice.ali
 W common%s		common.ads		common.ali
 W ot%s			ot.adb			ot.ali
@@ -47,10 +47,10 @@ D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D alice.ads		20200420201752 0bc6388d alice%s
 D bob.ads		20200421135028 9839b8a0 bob%s
 D bob.adb		20200421212014 5b30034d bob%b
-D common.ads		20200421125056 fd208fab common%s
+D common.ads		20200422101218 fa3e4f3b common%s
 D crypto.ads		20180402102852 b0d04738 crypto%s
 D crypto-types.ads	20180402102852 d664f69b crypto.types%s
-D crypto-types-big_numbers.ads  20200419115034 19da6856 crypto.types.big_numbers%s
+D crypto-types-big_numbers.ads  20180402102852 19da6856 crypto.types.big_numbers%s
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
 D ot.ads		20200421134950 75570516 ot%s

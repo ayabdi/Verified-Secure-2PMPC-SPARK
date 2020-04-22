@@ -51,7 +51,7 @@ package body Client is
 
       -- Alice inputs x1 and Generates sequence X and sends it to Bob
       Put_Line("Alice input  y1");
-      XY_array'Output(Channel , GenerateY(GetY));
+      XY_array'Output(Channel , GenerateY(Alice.GetY));
 
 
       --OT.RandomGen;
@@ -60,7 +60,6 @@ package body Client is
 
       -- (Oblivious Transfer) Alice recieves C
       C2 := TwoDArray'Input(Channel);
-
 
       -- Alice computes M = a/b^r
       Put_Line("Chosen message is");
