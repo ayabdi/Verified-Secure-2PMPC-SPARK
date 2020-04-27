@@ -1,0 +1,61 @@
+{
+  "spark": [
+    {
+      "name": "Bob.randomR",
+      "sloc": [
+        {
+          "file": "bob.ads",
+          "line": 8
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "Bob.GetX2",
+      "sloc": [
+        {
+          "file": "bob.ads",
+          "line": 9
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "Bob.GetY2",
+      "sloc": [
+        {
+          "file": "bob.ads",
+          "line": 10
+        }
+      ],
+      "spark": "no"
+    },
+    {
+      "name": "Bob.ComputeT",
+      "sloc": [
+        {
+          "file": "bob.ads",
+          "line": 11
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "marking": 2.74390005506575E-03,
+    "globals (basic)": 2.82851839065552E+00,
+    "globals/properties (advanced)": 8.67877006530762E-02,
+    "flow analysis": 2.37199990078807E-03,
+    "codepeer results": 1.05999997686013E-05,
+    "init_why_sections": 1.89308002591133E-02,
+    "translation of standard": 6.50409981608391E-03,
+    "translation of compilation unit": 3.49017009139061E-02,
+    "proof": 2.30000000556174E-06
+  }
+}

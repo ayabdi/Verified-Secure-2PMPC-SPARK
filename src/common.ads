@@ -4,7 +4,8 @@ with Ada.Text_IO; --Ada.Command_Line, Crypto.Types.Big_Numbers;
 package Common is
 
 
-   subtype Rand_Range is Integer range 1..1500;
+   subtype Rand_Range is Integer range 1..15000;
+
    subtype m is Integer range 1..3;
    type XY_array is array (Integer range <>) of Integer;
 

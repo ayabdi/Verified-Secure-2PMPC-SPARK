@@ -16,7 +16,7 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U ot%b			ot.adb			3e9f2451 OO PK IU
+U ot%b			ot.adb			3cd1c8ea OO PK IU
 W ada%s			ada.ads			ada.ali
 W ada.command_line%s	a-comlin.adb		a-comlin.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -34,7 +34,7 @@ Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.val_int%s	s-valint.adb		s-valint.ali
 
-U ot%s			ot.ads			72e1927e EE OO PK IU
+U ot%s			ot.ads			8b82ff30 EE OO PK IU
 W ada%s			ada.ads			ada.ali
 W ada.command_line%s	a-comlin.adb		a-comlin.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
@@ -80,8 +80,8 @@ D a-strunb.ads		20190518041256 1656705b ada.strings.unbounded%s
 D a-tags.ads		20190518041258 491b781d ada.tags%s
 D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
-D alice.ads		20200420201752 0bc6388d alice%s
-D common.ads		20200422101218 fa3e4f3b common%s
+D alice.ads		20200427181840 fc320dc1 alice%s
+D common.ads		20200427181452 fd26ffd1 common%s
 D crypto.ads		20180402102852 b0d04738 crypto%s
 D crypto-asymmetric.ads	20180402102852 696c0cdb crypto.asymmetric%s
 D crypto-asymmetric-prime_tables.ads  20180402102852 15dc4267 crypto.asymmetric.prime_tables%s
@@ -97,8 +97,8 @@ D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D ot.ads		20200421134950 75570516 ot%s
-D ot.adb		20200421211650 98a90620 ot%b
+D ot.ads		20200427182220 8b2cd8b2 ot%s
+D ot.adb		20200427182324 9470b299 ot%b
 D system.ads		20190518041258 32a08138 system%s
 D s-atacco.ads		20190518041258 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20190518041258 b45c2d8d system.atomic_counters%s
@@ -144,354 +144,376 @@ D s-win32.ads		20190518041256 90ecf4e6 system.win32%s
 G a e
 G c b b b [b ot 7 1 none]
 G c s s s [s ot 4 1 none]
-G c Z s s [Oeq ot__ln 67 13 8_4]
-G c Z s s [Olt ot__ln 68 13 8_4]
-G c Z s s [Ogt ot__ln 69 13 8_4]
-G c Z s s [Ole ot__ln 71 13 8_4]
-G c Z s s [Oge ot__ln 72 13 8_4]
-G c Z s s [min ot__ln 74 13 8_4]
-G c Z s s [max ot__ln 75 13 8_4]
-G c Z s s [Oeq ot__ln 78 13 8_4]
-G c Z s s [Oeq ot__ln 79 13 8_4]
-G c Z s s [Olt ot__ln 81 13 8_4]
-G c Z s s [Olt ot__ln 82 13 8_4]
-G c Z s s [Ogt ot__ln 84 13 8_4]
-G c Z s s [Ogt ot__ln 85 13 8_4]
-G c Z s s [Ole ot__ln 87 13 8_4]
-G c Z s s [Ole ot__ln 88 13 8_4]
-G c Z s s [Oge ot__ln 90 13 8_4]
-G c Z s s [Oge ot__ln 91 13 8_4]
-G c Z s s [Oadd ot__ln 98 13 8_4]
-G c Z s s [Oadd ot__ln 99 13 8_4]
-G c Z s s [Oadd ot__ln 100 13 8_4]
-G c Z s s [Osubtract ot__ln 102 13 8_4]
-G c Z s s [Osubtract ot__ln 103 13 8_4]
-G c Z s s [Osubtract ot__ln 104 13 8_4]
-G c Z s s [Osubtract ot__ln 106 13 8_4]
-G c Z s s [Omultiply ot__ln 108 13 8_4]
-G c Z s s [russ ot__ln 110 13 8_4]
-G c Z s s [karatsuba ot__ln 111 13 8_4]
-G c Z s s [karatsuba_p ot__ln 112 13 8_4]
-G c Z s s [toom_cook ot__ln 114 13 8_4]
-G c Z s s [toom_cook_p ot__ln 115 13 8_4]
-G c Z s s [Omultiply ot__ln 117 13 8_4]
-G c Z s s [Omultiply ot__ln 118 13 8_4]
-G c Z s s [Odivide ot__ln 120 13 8_4]
-G c Z s s [Odivide ot__ln 121 13 8_4]
-G c Z s s [Odivide ot__ln 122 13 8_4]
-G c Z s s [Oxor ot__ln 124 13 8_4]
-G c Z s s [Oor ot__ln 125 13 8_4]
-G c Z s s [Oand ot__ln 127 13 8_4]
-G c Z s s [Oand ot__ln 128 13 8_4]
-G c Z s s [Oand ot__ln 129 13 8_4]
-G c Z s s [Oexpon ot__ln 131 13 8_4]
-G c Z s s [Omod ot__ln 133 13 8_4]
-G c Z s s [Omod ot__ln 134 13 8_4]
-G c Z s s [swap ot__ln__utils 142 17 8_4]
-G c Z s s [set_least_significant_bit ot__ln__utils 144 17 8_4]
-G c Z s s [set_most_significant_bit ot__ln__utils 145 17 8_4]
-G c Z s s [is_odd ot__ln__utils 148 16 8_4]
-G c Z s s [is_even ot__ln__utils 151 16 8_4]
-G c Z s s [inc ot__ln__utils 160 17 8_4]
-G c Z s s [dec ot__ln__utils 161 17 8_4]
-G c Z s s [to_big_unsigned ot__ln__utils 163 16 8_4]
-G c Z s s [shift_left ot__ln__utils 166 16 8_4]
-G c Z s s [shift_right ot__ln__utils 169 16 8_4]
-G c Z s s [rotate_left ot__ln__utils 172 16 8_4]
-G c Z s s [rotate_right ot__ln__utils 175 16 8_4]
-G c Z s s [get_random ot__ln__utils 178 16 8_4]
-G c Z s s [bit_length ot__ln__utils 180 16 8_4]
-G c Z s s [lowest_set_bit ot__ln__utils 182 16 8_4]
-G c Z s s [length_in_bytes ot__ln__utils 184 16 8_4]
-G c Z s s [gcd ot__ln__utils 186 16 8_4]
-G c Z s s [to_bytes ot__ln__utils 188 16 8_4]
-G c Z s s [to_big_unsigned ot__ln__utils 190 16 8_4]
-G c Z s s [to_words ot__ln__utils 192 16 8_4]
-G c Z s s [to_big_unsigned ot__ln__utils 194 16 8_4]
-G c Z s s [to_string ot__ln__utils 196 16 8_4]
-G c Z s s [to_big_unsigned ot__ln__utils 199 16 8_4]
-G c Z s s [put ot__ln__utils 201 17 8_4]
-G c Z s s [put_line ot__ln__utils 203 17 8_4]
-G c Z s s [big_div ot__ln__utils 206 17 8_4]
-G c Z s s [short_div ot__ln__utils 209 17 8_4]
-G c Z s s [max ot__ln__utils 332 13 8_4]
-G c Z s s [get_digit ot__ln__utils 602 13 8_4]
-G c Z s s [add ot__ln__mod_utils 222 16 8_4]
-G c Z s s [sub ot__ln__mod_utils 223 16 8_4]
-G c Z s s [div ot__ln__mod_utils 224 16 8_4]
-G c Z s s [mult ot__ln__mod_utils 225 16 8_4]
-G c Z s s [pow ot__ln__mod_utils 229 16 8_4]
-G c Z s s [get_random ot__ln__mod_utils 232 16 8_4]
-G c Z s s [inverse ot__ln__mod_utils 234 16 8_4]
-G c Z s s [get_prime ot__ln__mod_utils 238 16 8_4]
-G c Z s s [get_n_bit_prime ot__ln__mod_utils 241 16 8_4]
-G c Z s s [is_prime ot__ln__mod_utils 255 16 8_4]
-G c Z s s [looks_like_a_prime ot__ln__mod_utils 259 16 8_4]
-G c Z s s [passed_miller_rabin_test ot__ln__mod_utils 267 16 8_4]
-G c Z s s [jacobi ot__ln__mod_utils 270 16 8_4]
-G c Z s s [shift_left ot__ln__mod_utils 274 16 8_4]
-G c Z s s [bit_length ot__ln__mod_utils 276 16 8_4]
-G c Z s s [patch ot__ln__mod_utils 38 13 8_4]
-G c Z s s [lucas_lehmer_test ot__ln__mod_utils 159 13 8_4]
-G c Z s s [is_miller_rabin_witness ot__ln__mod_utils 196 13 8_4]
-G c Z s s [is_simple_witness ot__ln__mod_utils 220 14 8_4]
-G c Z s s [pass_prime_test ot__ln__mod_utils 258 13 8_4]
-G c Z s s [Omod ot__ln__mod_utils 382 13 8_4]
-G c Z s s [Oeq ot__ln__mod_utils 509 13 8_4]
-G c Z s s [Olt ot__ln__mod_utils 588 13 8_4]
-G c Z s s [Ogt ot__ln__mod_utils 604 13 8_4]
-G c Z s s [Oge ot__ln__mod_utils 613 13 8_4]
-G c Z s s [Oadd ot__ln__mod_utils 620 13 8_4]
-G c Z s s [Osubtract ot__ln__mod_utils 622 13 8_4]
-G c Z s s [b_add ot__ln__binfield_utils 289 18 8_4]
-G c Z s s [b_sub ot__ln__binfield_utils 290 18 8_4]
-G c Z s s [b_mult ot__ln__binfield_utils 292 18 8_4]
-G c Z s s [b_div ot__ln__binfield_utils 293 18 8_4]
-G c Z s s [b_square ot__ln__binfield_utils 295 18 8_4]
-G c Z s s [b_mod ot__ln__binfield_utils 297 18 8_4]
-G c Z s s [b_inverse ot__ln__binfield_utils 299 18 8_4]
-G c Z s s [b_mod ot__ln__binfield_utils 38 14 8_4]
-G c Z s s [Oxor ot__ln__binfield_utils 41 14 8_4]
-G c Z s s [set_last_index ot__ln__binfield_utils 43 15 8_4]
-G c Z s s [b_mult ot__ln__binfield_utils 83 13 8_4]
-G c Z s s [big_unsignedIP ot__ln 341 9 8_4]
-G c Z s s [d_big_unsignedIP ot__ln 346 9 8_4]
-G c Z s s [shift_left ot__ln 385 13 8_4]
-G c Z s s [shift_right ot__ln 387 13 8_4]
-G c Z s s [last_index ot__ln 816 15 8_4]
-G c Z s b [computey ot 18 13 none]
-G c Z s b [computec ot 19 13 none]
-G c Z s b [messages ot 20 13 none]
-G c Z s b [kk ot 21 13 none]
-G c Z s b [recievemessage ot 22 13 none]
-G c Z s s [twodarrayIP ot 14 9 none]
-G c Z s s [arrunsignedIP ot 16 9 none]
-G c Z b b [randomgen ot 24 10 none]
+G c Z s s [Oeq ot__ln 67 13 7_4]
+G c Z s s [Olt ot__ln 68 13 7_4]
+G c Z s s [Ogt ot__ln 69 13 7_4]
+G c Z s s [Ole ot__ln 71 13 7_4]
+G c Z s s [Oge ot__ln 72 13 7_4]
+G c Z s s [min ot__ln 74 13 7_4]
+G c Z s s [max ot__ln 75 13 7_4]
+G c Z s s [Oeq ot__ln 78 13 7_4]
+G c Z s s [Oeq ot__ln 79 13 7_4]
+G c Z s s [Olt ot__ln 81 13 7_4]
+G c Z s s [Olt ot__ln 82 13 7_4]
+G c Z s s [Ogt ot__ln 84 13 7_4]
+G c Z s s [Ogt ot__ln 85 13 7_4]
+G c Z s s [Ole ot__ln 87 13 7_4]
+G c Z s s [Ole ot__ln 88 13 7_4]
+G c Z s s [Oge ot__ln 90 13 7_4]
+G c Z s s [Oge ot__ln 91 13 7_4]
+G c Z s s [Oadd ot__ln 98 13 7_4]
+G c Z s s [Oadd ot__ln 99 13 7_4]
+G c Z s s [Oadd ot__ln 100 13 7_4]
+G c Z s s [Osubtract ot__ln 102 13 7_4]
+G c Z s s [Osubtract ot__ln 103 13 7_4]
+G c Z s s [Osubtract ot__ln 104 13 7_4]
+G c Z s s [Osubtract ot__ln 106 13 7_4]
+G c Z s s [Omultiply ot__ln 108 13 7_4]
+G c Z s s [russ ot__ln 110 13 7_4]
+G c Z s s [karatsuba ot__ln 111 13 7_4]
+G c Z s s [karatsuba_p ot__ln 112 13 7_4]
+G c Z s s [toom_cook ot__ln 114 13 7_4]
+G c Z s s [toom_cook_p ot__ln 115 13 7_4]
+G c Z s s [Omultiply ot__ln 117 13 7_4]
+G c Z s s [Omultiply ot__ln 118 13 7_4]
+G c Z s s [Odivide ot__ln 120 13 7_4]
+G c Z s s [Odivide ot__ln 121 13 7_4]
+G c Z s s [Odivide ot__ln 122 13 7_4]
+G c Z s s [Oxor ot__ln 124 13 7_4]
+G c Z s s [Oor ot__ln 125 13 7_4]
+G c Z s s [Oand ot__ln 127 13 7_4]
+G c Z s s [Oand ot__ln 128 13 7_4]
+G c Z s s [Oand ot__ln 129 13 7_4]
+G c Z s s [Oexpon ot__ln 131 13 7_4]
+G c Z s s [Omod ot__ln 133 13 7_4]
+G c Z s s [Omod ot__ln 134 13 7_4]
+G c Z s s [swap ot__ln__utils 142 17 7_4]
+G c Z s s [set_least_significant_bit ot__ln__utils 144 17 7_4]
+G c Z s s [set_most_significant_bit ot__ln__utils 145 17 7_4]
+G c Z s s [is_odd ot__ln__utils 148 16 7_4]
+G c Z s s [is_even ot__ln__utils 151 16 7_4]
+G c Z s s [inc ot__ln__utils 160 17 7_4]
+G c Z s s [dec ot__ln__utils 161 17 7_4]
+G c Z s s [to_big_unsigned ot__ln__utils 163 16 7_4]
+G c Z s s [shift_left ot__ln__utils 166 16 7_4]
+G c Z s s [shift_right ot__ln__utils 169 16 7_4]
+G c Z s s [rotate_left ot__ln__utils 172 16 7_4]
+G c Z s s [rotate_right ot__ln__utils 175 16 7_4]
+G c Z s s [get_random ot__ln__utils 178 16 7_4]
+G c Z s s [bit_length ot__ln__utils 180 16 7_4]
+G c Z s s [lowest_set_bit ot__ln__utils 182 16 7_4]
+G c Z s s [length_in_bytes ot__ln__utils 184 16 7_4]
+G c Z s s [gcd ot__ln__utils 186 16 7_4]
+G c Z s s [to_bytes ot__ln__utils 188 16 7_4]
+G c Z s s [to_big_unsigned ot__ln__utils 190 16 7_4]
+G c Z s s [to_words ot__ln__utils 192 16 7_4]
+G c Z s s [to_big_unsigned ot__ln__utils 194 16 7_4]
+G c Z s s [to_string ot__ln__utils 196 16 7_4]
+G c Z s s [to_big_unsigned ot__ln__utils 199 16 7_4]
+G c Z s s [put ot__ln__utils 201 17 7_4]
+G c Z s s [put_line ot__ln__utils 203 17 7_4]
+G c Z s s [big_div ot__ln__utils 206 17 7_4]
+G c Z s s [short_div ot__ln__utils 209 17 7_4]
+G c Z s s [max ot__ln__utils 332 13 7_4]
+G c Z s s [get_digit ot__ln__utils 602 13 7_4]
+G c Z s s [add ot__ln__mod_utils 222 16 7_4]
+G c Z s s [sub ot__ln__mod_utils 223 16 7_4]
+G c Z s s [div ot__ln__mod_utils 224 16 7_4]
+G c Z s s [mult ot__ln__mod_utils 225 16 7_4]
+G c Z s s [pow ot__ln__mod_utils 229 16 7_4]
+G c Z s s [get_random ot__ln__mod_utils 232 16 7_4]
+G c Z s s [inverse ot__ln__mod_utils 234 16 7_4]
+G c Z s s [get_prime ot__ln__mod_utils 238 16 7_4]
+G c Z s s [get_n_bit_prime ot__ln__mod_utils 241 16 7_4]
+G c Z s s [is_prime ot__ln__mod_utils 255 16 7_4]
+G c Z s s [looks_like_a_prime ot__ln__mod_utils 259 16 7_4]
+G c Z s s [passed_miller_rabin_test ot__ln__mod_utils 267 16 7_4]
+G c Z s s [jacobi ot__ln__mod_utils 270 16 7_4]
+G c Z s s [shift_left ot__ln__mod_utils 274 16 7_4]
+G c Z s s [bit_length ot__ln__mod_utils 276 16 7_4]
+G c Z s s [patch ot__ln__mod_utils 38 13 7_4]
+G c Z s s [lucas_lehmer_test ot__ln__mod_utils 159 13 7_4]
+G c Z s s [is_miller_rabin_witness ot__ln__mod_utils 196 13 7_4]
+G c Z s s [is_simple_witness ot__ln__mod_utils 220 14 7_4]
+G c Z s s [pass_prime_test ot__ln__mod_utils 258 13 7_4]
+G c Z s s [Omod ot__ln__mod_utils 382 13 7_4]
+G c Z s s [Oeq ot__ln__mod_utils 509 13 7_4]
+G c Z s s [Olt ot__ln__mod_utils 588 13 7_4]
+G c Z s s [Ogt ot__ln__mod_utils 604 13 7_4]
+G c Z s s [Oge ot__ln__mod_utils 613 13 7_4]
+G c Z s s [Oadd ot__ln__mod_utils 620 13 7_4]
+G c Z s s [Osubtract ot__ln__mod_utils 622 13 7_4]
+G c Z s s [b_add ot__ln__binfield_utils 289 18 7_4]
+G c Z s s [b_sub ot__ln__binfield_utils 290 18 7_4]
+G c Z s s [b_mult ot__ln__binfield_utils 292 18 7_4]
+G c Z s s [b_div ot__ln__binfield_utils 293 18 7_4]
+G c Z s s [b_square ot__ln__binfield_utils 295 18 7_4]
+G c Z s s [b_mod ot__ln__binfield_utils 297 18 7_4]
+G c Z s s [b_inverse ot__ln__binfield_utils 299 18 7_4]
+G c Z s s [b_mod ot__ln__binfield_utils 38 14 7_4]
+G c Z s s [Oxor ot__ln__binfield_utils 41 14 7_4]
+G c Z s s [set_last_index ot__ln__binfield_utils 43 15 7_4]
+G c Z s s [b_mult ot__ln__binfield_utils 83 13 7_4]
+G c Z s s [big_unsignedIP ot__ln 341 9 7_4]
+G c Z s s [d_big_unsignedIP ot__ln 346 9 7_4]
+G c Z s s [shift_left ot__ln 385 13 7_4]
+G c Z s s [shift_right ot__ln 387 13 7_4]
+G c Z s s [last_index ot__ln 816 15 7_4]
+G c Z s b [computey ot 20 13 none]
+G c Z s b [computec ot 21 13 none]
+G c Z s b [kk ot 22 13 none]
+G c Z s b [recievemessage ot 23 13 none]
+G c Z s b [distance ot 24 14 none]
+G c Z s s [twodarrayIP ot 16 9 none]
+G c Z s s [arrunsignedIP ot 18 9 none]
+G c Z b b [randomgen ot 16 10 none]
 G r c none [b ot 7 1 none] [shift_right crypto__types 150 13 none]
 G r c none [b ot 7 1 none] [shift_left crypto__types 149 13 none]
 G r i none [s ot 4 1 none] [big_numbers crypto__types 39 22 none]
-G r c none [Oadd ot__ln 98 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Oadd ot__ln 98 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [Oadd ot__ln 99 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Oadd ot__ln 99 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [Oadd ot__ln 100 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Oadd ot__ln 100 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [Osubtract ot__ln 102 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Osubtract ot__ln 102 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [Osubtract ot__ln 103 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Osubtract ot__ln 103 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [Osubtract ot__ln 104 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Osubtract ot__ln 104 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [Osubtract ot__ln 106 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Osubtract ot__ln 106 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [Omultiply ot__ln 108 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Omultiply ot__ln 108 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [russ ot__ln 110 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [russ ot__ln 110 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [karatsuba ot__ln 111 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [karatsuba ot__ln 111 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [karatsuba_p ot__ln 112 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [karatsuba_p ot__ln 112 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [toom_cook ot__ln 114 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [toom_cook ot__ln 114 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [toom_cook_p ot__ln 115 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [toom_cook_p ot__ln 115 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [Omultiply ot__ln 117 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [Omultiply ot__ln 117 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Omultiply ot__ln 118 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [Omultiply ot__ln 118 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Odivide ot__ln 120 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Odivide ot__ln 120 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [Odivide ot__ln 122 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Odivide ot__ln 122 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [Oexpon ot__ln 131 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Oexpon ot__ln 131 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [Omod ot__ln 133 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Omod ot__ln 133 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [set_most_significant_bit ot__ln__utils 145 17 8_4] [shift_left crypto__types 149 13 none]
-G r c none [shift_left ot__ln__utils 166 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [shift_left ot__ln__utils 166 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [shift_right ot__ln__utils 169 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [shift_right ot__ln__utils 169 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [rotate_left ot__ln__utils 172 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [rotate_left ot__ln__utils 172 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [rotate_right ot__ln__utils 175 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [rotate_right ot__ln__utils 175 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [get_random ot__ln__utils 178 16 8_4] [read crypto__types__random 34 14 none]
-G r c none [bit_length ot__ln__utils 180 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [lowest_set_bit ot__ln__utils 182 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [length_in_bytes ot__ln__utils 184 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [gcd ot__ln__utils 186 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [gcd ot__ln__utils 186 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [to_bytes ot__ln__utils 188 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [to_bytes ot__ln__utils 188 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [to_big_unsigned ot__ln__utils 190 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [to_big_unsigned ot__ln__utils 199 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [to_big_unsigned ot__ln__utils 199 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [big_div ot__ln__utils 206 17 8_4] [shift_left crypto__types 149 13 none]
-G r c none [big_div ot__ln__utils 206 17 8_4] [shift_right crypto__types 150 13 none]
-G r c none [add ot__ln__mod_utils 222 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [add ot__ln__mod_utils 222 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [sub ot__ln__mod_utils 223 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [sub ot__ln__mod_utils 223 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [div ot__ln__mod_utils 224 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [div ot__ln__mod_utils 224 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [div ot__ln__mod_utils 224 16 8_4] [shift_right crypto__types 155 13 none]
-G r c none [mult ot__ln__mod_utils 225 16 8_4] [shift_right crypto__types 155 13 none]
-G r c none [mult ot__ln__mod_utils 225 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [mult ot__ln__mod_utils 225 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [pow ot__ln__mod_utils 229 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [pow ot__ln__mod_utils 229 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [pow ot__ln__mod_utils 229 16 8_4] [shift_right crypto__types 155 13 none]
-G r c none [get_random ot__ln__mod_utils 232 16 8_4] [read crypto__types__random 34 14 none]
-G r c none [get_random ot__ln__mod_utils 232 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [get_random ot__ln__mod_utils 232 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [inverse ot__ln__mod_utils 234 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [inverse ot__ln__mod_utils 234 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [inverse ot__ln__mod_utils 234 16 8_4] [shift_right crypto__types 155 13 none]
-G r c none [get_prime ot__ln__mod_utils 238 16 8_4] [read crypto__types__random 34 14 none]
-G r c none [get_prime ot__ln__mod_utils 238 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [get_prime ot__ln__mod_utils 238 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [get_prime ot__ln__mod_utils 238 16 8_4] [shift_right crypto__types 155 13 none]
-G r c none [get_n_bit_prime ot__ln__mod_utils 241 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [get_n_bit_prime ot__ln__mod_utils 241 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [get_n_bit_prime ot__ln__mod_utils 241 16 8_4] [read crypto__types__random 34 14 none]
-G r c none [get_n_bit_prime ot__ln__mod_utils 241 16 8_4] [shift_right crypto__types 155 13 none]
-G r c none [is_prime ot__ln__mod_utils 255 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [is_prime ot__ln__mod_utils 255 16 8_4] [shift_right crypto__types 155 13 none]
-G r c none [is_prime ot__ln__mod_utils 255 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [is_prime ot__ln__mod_utils 255 16 8_4] [read crypto__types__random 34 14 none]
-G r c none [looks_like_a_prime ot__ln__mod_utils 259 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [looks_like_a_prime ot__ln__mod_utils 259 16 8_4] [shift_right crypto__types 155 13 none]
-G r c none [looks_like_a_prime ot__ln__mod_utils 259 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [looks_like_a_prime ot__ln__mod_utils 259 16 8_4] [read crypto__types__random 34 14 none]
-G r c none [passed_miller_rabin_test ot__ln__mod_utils 267 16 8_4] [read crypto__types__random 34 14 none]
-G r c none [passed_miller_rabin_test ot__ln__mod_utils 267 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [passed_miller_rabin_test ot__ln__mod_utils 267 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [passed_miller_rabin_test ot__ln__mod_utils 267 16 8_4] [shift_right crypto__types 155 13 none]
-G r c none [jacobi ot__ln__mod_utils 270 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [jacobi ot__ln__mod_utils 270 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [shift_left ot__ln__mod_utils 274 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [shift_left ot__ln__mod_utils 274 16 8_4] [shift_right crypto__types 150 13 none]
-G r c none [bit_length ot__ln__mod_utils 276 16 8_4] [shift_left crypto__types 149 13 none]
-G r c none [patch ot__ln__mod_utils 38 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [patch ot__ln__mod_utils 38 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [lucas_lehmer_test ot__ln__mod_utils 159 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [lucas_lehmer_test ot__ln__mod_utils 159 13 8_4] [shift_right crypto__types 155 13 none]
-G r c none [lucas_lehmer_test ot__ln__mod_utils 159 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [is_miller_rabin_witness ot__ln__mod_utils 196 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [is_miller_rabin_witness ot__ln__mod_utils 196 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [is_miller_rabin_witness ot__ln__mod_utils 196 13 8_4] [shift_right crypto__types 155 13 none]
-G r c none [is_simple_witness ot__ln__mod_utils 220 14 8_4] [shift_left crypto__types 149 13 none]
-G r c none [is_simple_witness ot__ln__mod_utils 220 14 8_4] [shift_right crypto__types 150 13 none]
-G r c none [is_simple_witness ot__ln__mod_utils 220 14 8_4] [shift_right crypto__types 155 13 none]
-G r c none [pass_prime_test ot__ln__mod_utils 258 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [pass_prime_test ot__ln__mod_utils 258 13 8_4] [shift_right crypto__types 155 13 none]
-G r c none [pass_prime_test ot__ln__mod_utils 258 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [pass_prime_test ot__ln__mod_utils 258 13 8_4] [read crypto__types__random 34 14 none]
-G r c none [Omod ot__ln__mod_utils 382 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [Omod ot__ln__mod_utils 382 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [b_mult ot__ln__binfield_utils 292 18 8_4] [shift_right crypto__types 150 13 none]
-G r c none [b_mult ot__ln__binfield_utils 292 18 8_4] [shift_left crypto__types 149 13 none]
-G r c none [b_div ot__ln__binfield_utils 293 18 8_4] [shift_right crypto__types 150 13 none]
-G r c none [b_div ot__ln__binfield_utils 293 18 8_4] [shift_left crypto__types 149 13 none]
-G r c none [b_square ot__ln__binfield_utils 295 18 8_4] [shift_left crypto__types 149 13 none]
-G r c none [b_square ot__ln__binfield_utils 295 18 8_4] [shift_right crypto__types 150 13 none]
-G r c none [b_mod ot__ln__binfield_utils 297 18 8_4] [shift_left crypto__types 149 13 none]
-G r c none [b_mod ot__ln__binfield_utils 297 18 8_4] [shift_right crypto__types 150 13 none]
-G r c none [b_inverse ot__ln__binfield_utils 299 18 8_4] [shift_right crypto__types 150 13 none]
-G r c none [b_inverse ot__ln__binfield_utils 299 18 8_4] [shift_left crypto__types 149 13 none]
-G r c none [b_mod ot__ln__binfield_utils 38 14 8_4] [shift_left crypto__types 149 13 none]
-G r c none [b_mod ot__ln__binfield_utils 38 14 8_4] [shift_right crypto__types 150 13 none]
-G r c none [b_mult ot__ln__binfield_utils 83 13 8_4] [shift_left crypto__types 149 13 none]
-G r c none [b_mult ot__ln__binfield_utils 83 13 8_4] [shift_right crypto__types 150 13 none]
-G r c none [computey ot 18 13 none] [shift_left crypto__types 149 13 none]
-G r c none [computey ot 18 13 none] [shift_right crypto__types 150 13 none]
-G r c none [computec ot 19 13 none] [shift_left crypto__types 149 13 none]
-G r c none [computec ot 19 13 none] [shift_right crypto__types 150 13 none]
-G r c none [messages ot 20 13 none] [shift_right crypto__types 150 13 none]
-G r c none [messages ot 20 13 none] [shift_left crypto__types 149 13 none]
-G r c none [kk ot 21 13 none] [shift_right crypto__types 150 13 none]
-G r c none [kk ot 21 13 none] [shift_left crypto__types 149 13 none]
-G r c none [recievemessage ot 22 13 none] [shift_left crypto__types 149 13 none]
-G r c none [recievemessage ot 22 13 none] [shift_right crypto__types 150 13 none]
+G r c none [Oadd ot__ln 98 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Oadd ot__ln 98 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [Oadd ot__ln 99 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Oadd ot__ln 99 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [Oadd ot__ln 100 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Oadd ot__ln 100 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [Osubtract ot__ln 102 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Osubtract ot__ln 102 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [Osubtract ot__ln 103 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Osubtract ot__ln 103 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [Osubtract ot__ln 104 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Osubtract ot__ln 104 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [Osubtract ot__ln 106 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Osubtract ot__ln 106 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [Omultiply ot__ln 108 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Omultiply ot__ln 108 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [russ ot__ln 110 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [russ ot__ln 110 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [karatsuba ot__ln 111 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [karatsuba ot__ln 111 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [karatsuba_p ot__ln 112 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [karatsuba_p ot__ln 112 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [toom_cook ot__ln 114 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [toom_cook ot__ln 114 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [toom_cook_p ot__ln 115 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [toom_cook_p ot__ln 115 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [Omultiply ot__ln 117 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [Omultiply ot__ln 117 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Omultiply ot__ln 118 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [Omultiply ot__ln 118 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Odivide ot__ln 120 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Odivide ot__ln 120 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [Odivide ot__ln 122 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Odivide ot__ln 122 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [Oexpon ot__ln 131 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Oexpon ot__ln 131 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [Omod ot__ln 133 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Omod ot__ln 133 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [set_most_significant_bit ot__ln__utils 145 17 7_4] [shift_left crypto__types 149 13 none]
+G r c none [shift_left ot__ln__utils 166 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [shift_left ot__ln__utils 166 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [shift_right ot__ln__utils 169 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [shift_right ot__ln__utils 169 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [rotate_left ot__ln__utils 172 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [rotate_left ot__ln__utils 172 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [rotate_right ot__ln__utils 175 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [rotate_right ot__ln__utils 175 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [get_random ot__ln__utils 178 16 7_4] [read crypto__types__random 34 14 none]
+G r c none [bit_length ot__ln__utils 180 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [lowest_set_bit ot__ln__utils 182 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [length_in_bytes ot__ln__utils 184 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [gcd ot__ln__utils 186 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [gcd ot__ln__utils 186 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [to_bytes ot__ln__utils 188 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [to_bytes ot__ln__utils 188 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [to_big_unsigned ot__ln__utils 190 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [to_big_unsigned ot__ln__utils 199 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [to_big_unsigned ot__ln__utils 199 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [big_div ot__ln__utils 206 17 7_4] [shift_left crypto__types 149 13 none]
+G r c none [big_div ot__ln__utils 206 17 7_4] [shift_right crypto__types 150 13 none]
+G r c none [add ot__ln__mod_utils 222 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [add ot__ln__mod_utils 222 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [sub ot__ln__mod_utils 223 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [sub ot__ln__mod_utils 223 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [div ot__ln__mod_utils 224 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [div ot__ln__mod_utils 224 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [div ot__ln__mod_utils 224 16 7_4] [shift_right crypto__types 155 13 none]
+G r c none [mult ot__ln__mod_utils 225 16 7_4] [shift_right crypto__types 155 13 none]
+G r c none [mult ot__ln__mod_utils 225 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [mult ot__ln__mod_utils 225 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [pow ot__ln__mod_utils 229 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [pow ot__ln__mod_utils 229 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [pow ot__ln__mod_utils 229 16 7_4] [shift_right crypto__types 155 13 none]
+G r c none [get_random ot__ln__mod_utils 232 16 7_4] [read crypto__types__random 34 14 none]
+G r c none [get_random ot__ln__mod_utils 232 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [get_random ot__ln__mod_utils 232 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [inverse ot__ln__mod_utils 234 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [inverse ot__ln__mod_utils 234 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [inverse ot__ln__mod_utils 234 16 7_4] [shift_right crypto__types 155 13 none]
+G r c none [get_prime ot__ln__mod_utils 238 16 7_4] [read crypto__types__random 34 14 none]
+G r c none [get_prime ot__ln__mod_utils 238 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [get_prime ot__ln__mod_utils 238 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [get_prime ot__ln__mod_utils 238 16 7_4] [shift_right crypto__types 155 13 none]
+G r c none [get_n_bit_prime ot__ln__mod_utils 241 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [get_n_bit_prime ot__ln__mod_utils 241 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [get_n_bit_prime ot__ln__mod_utils 241 16 7_4] [read crypto__types__random 34 14 none]
+G r c none [get_n_bit_prime ot__ln__mod_utils 241 16 7_4] [shift_right crypto__types 155 13 none]
+G r c none [is_prime ot__ln__mod_utils 255 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [is_prime ot__ln__mod_utils 255 16 7_4] [shift_right crypto__types 155 13 none]
+G r c none [is_prime ot__ln__mod_utils 255 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [is_prime ot__ln__mod_utils 255 16 7_4] [read crypto__types__random 34 14 none]
+G r c none [looks_like_a_prime ot__ln__mod_utils 259 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [looks_like_a_prime ot__ln__mod_utils 259 16 7_4] [shift_right crypto__types 155 13 none]
+G r c none [looks_like_a_prime ot__ln__mod_utils 259 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [looks_like_a_prime ot__ln__mod_utils 259 16 7_4] [read crypto__types__random 34 14 none]
+G r c none [passed_miller_rabin_test ot__ln__mod_utils 267 16 7_4] [read crypto__types__random 34 14 none]
+G r c none [passed_miller_rabin_test ot__ln__mod_utils 267 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [passed_miller_rabin_test ot__ln__mod_utils 267 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [passed_miller_rabin_test ot__ln__mod_utils 267 16 7_4] [shift_right crypto__types 155 13 none]
+G r c none [jacobi ot__ln__mod_utils 270 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [jacobi ot__ln__mod_utils 270 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [shift_left ot__ln__mod_utils 274 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [shift_left ot__ln__mod_utils 274 16 7_4] [shift_right crypto__types 150 13 none]
+G r c none [bit_length ot__ln__mod_utils 276 16 7_4] [shift_left crypto__types 149 13 none]
+G r c none [patch ot__ln__mod_utils 38 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [patch ot__ln__mod_utils 38 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [lucas_lehmer_test ot__ln__mod_utils 159 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [lucas_lehmer_test ot__ln__mod_utils 159 13 7_4] [shift_right crypto__types 155 13 none]
+G r c none [lucas_lehmer_test ot__ln__mod_utils 159 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [is_miller_rabin_witness ot__ln__mod_utils 196 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [is_miller_rabin_witness ot__ln__mod_utils 196 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [is_miller_rabin_witness ot__ln__mod_utils 196 13 7_4] [shift_right crypto__types 155 13 none]
+G r c none [is_simple_witness ot__ln__mod_utils 220 14 7_4] [shift_left crypto__types 149 13 none]
+G r c none [is_simple_witness ot__ln__mod_utils 220 14 7_4] [shift_right crypto__types 150 13 none]
+G r c none [is_simple_witness ot__ln__mod_utils 220 14 7_4] [shift_right crypto__types 155 13 none]
+G r c none [pass_prime_test ot__ln__mod_utils 258 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [pass_prime_test ot__ln__mod_utils 258 13 7_4] [shift_right crypto__types 155 13 none]
+G r c none [pass_prime_test ot__ln__mod_utils 258 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [pass_prime_test ot__ln__mod_utils 258 13 7_4] [read crypto__types__random 34 14 none]
+G r c none [Omod ot__ln__mod_utils 382 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [Omod ot__ln__mod_utils 382 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [b_mult ot__ln__binfield_utils 292 18 7_4] [shift_right crypto__types 150 13 none]
+G r c none [b_mult ot__ln__binfield_utils 292 18 7_4] [shift_left crypto__types 149 13 none]
+G r c none [b_div ot__ln__binfield_utils 293 18 7_4] [shift_right crypto__types 150 13 none]
+G r c none [b_div ot__ln__binfield_utils 293 18 7_4] [shift_left crypto__types 149 13 none]
+G r c none [b_square ot__ln__binfield_utils 295 18 7_4] [shift_left crypto__types 149 13 none]
+G r c none [b_square ot__ln__binfield_utils 295 18 7_4] [shift_right crypto__types 150 13 none]
+G r c none [b_mod ot__ln__binfield_utils 297 18 7_4] [shift_left crypto__types 149 13 none]
+G r c none [b_mod ot__ln__binfield_utils 297 18 7_4] [shift_right crypto__types 150 13 none]
+G r c none [b_inverse ot__ln__binfield_utils 299 18 7_4] [shift_right crypto__types 150 13 none]
+G r c none [b_inverse ot__ln__binfield_utils 299 18 7_4] [shift_left crypto__types 149 13 none]
+G r c none [b_mod ot__ln__binfield_utils 38 14 7_4] [shift_left crypto__types 149 13 none]
+G r c none [b_mod ot__ln__binfield_utils 38 14 7_4] [shift_right crypto__types 150 13 none]
+G r c none [b_mult ot__ln__binfield_utils 83 13 7_4] [shift_left crypto__types 149 13 none]
+G r c none [b_mult ot__ln__binfield_utils 83 13 7_4] [shift_right crypto__types 150 13 none]
+G r c none [computey ot 20 13 none] [shift_left crypto__types 149 13 none]
+G r c none [computey ot 20 13 none] [shift_right crypto__types 150 13 none]
+G r c none [computec ot 21 13 none] [shift_left crypto__types 149 13 none]
+G r c none [computec ot 21 13 none] [shift_right crypto__types 150 13 none]
+G r c none [kk ot 22 13 none] [shift_right crypto__types 150 13 none]
+G r c none [kk ot 22 13 none] [shift_left crypto__types 149 13 none]
+G r c none [recievemessage ot 23 13 none] [shift_left crypto__types 149 13 none]
+G r c none [recievemessage ot 23 13 none] [shift_right crypto__types 150 13 none]
+G r c none [distance ot 24 14 none] [shift_right crypto__types 150 13 none]
+G r c none [distance ot 24 14 none] [shift_left crypto__types 149 13 none]
 X 1 ada.ads
-16K9*Ada 20e8 36|2r6 2r19 37|1r6 2r5 3r6 4r6 4r19 25r28
+16K9*Ada 20e8 36|2r6 2r19 37|1r6 2r5 3r6 4r6 4r19 17r28
 X 4 a-comlin.ads
 36K13*Command_Line 144e21 36|2w23 37|4w23
 X 8 a-numeri.ads
-16K13*Numerics 32e17 37|3r10 25r32
+16K13*Numerics 32e17 37|3r10 17r32
 X 9 a-nudira.ads
-44k22*Discrete_Random 75e33 37|3w19 25r41
-50R9 Generator<53|63R9> 37|26r20[25]
-52V13 Random{integer} 37|30s20[25]
-55U14 Reset<53|100p14> 37|29s13[25]
+44k22*Discrete_Random 75e33 37|3w19 17r41
+50R9 Generator<53|63R9> 37|18r20[17]
+52V13 Random{integer} 37|22s20[17]
+55U14 Reset<53|100p14> 37|21s13[17]
 X 10 a-nudira.adb
-53V16 Random[53|83]{integer} 54|392b13[37|25]
+53V16 Random[53|83]{integer} 54|392b13[37|17]
 X 17 a-textio.ads
 57K13*Text_IO 727e16 36|2w10 37|1w10 2r9 4w10
 X 19 alice.ads
-3K9*Alice 25e10 37|1w19 2r18
+3K9*Alice 35e10 37|1w19 2r18
 X 20 common.ads
-4K9*Common 14e11 36|1w7 37|1w26 2r25
-7I12*Rand_Range{integer} 37|25r57 27r10
-8I12*m{integer} 37|50r29 58r24 67r19
+4K9*Common 15e11 36|1w7 37|1w26 2r25
+7I12*Rand_Range{integer} 37|17r57 19r10
+9I12*m{integer} 37|39r24 48r19
 X 21 crypto.ads
-24K9*Crypto 25e11 36|2r37 8r22 37|4r37
+24K9*Crypto 25e11 36|2r37 7r22 37|4r37
 X 24 crypto-types.ads
-23K16*Types 357e17 36|2r44 8r29 37|4r44
+23K16*Types 357e17 36|2r44 7r29 37|4r44
 X 25 crypto-types-big_numbers.ads
-39k22*Big_Numbers 399e29 36|2w50 3r35 8r35 37|4w50 5r35
-41R9*Big_Unsigned 36|10r19[8] 15r57[8] 16r55[8] 18r32[8] 19r30[8] 22r56[8]
-. 22r81[8] 37|19r11[36|8] 20r11[36|8] 21r11[36|8] 22r11[36|8] 40r32[36|8]
-. 41r14[36|8] 66r30[36|8] 68r13[36|8] 69r13[36|8] 82r56[36|8] 82r81[36|8]
-108V14*"*"{41R9[36|8]} 37|43s19[36|8] 74s21[36|8]
-120V14*"/"{41R9[36|8]} 37|74s26[36|8] 85s56[36|8]
-131V14*"**"{41R9[36|8]} 37|43s14[36|8] 43s23[36|8] 72s17[36|8] 74s29[36|8]
-. 74s67[36|8] 85s101[36|8]
-140K12*Utils 36|12r12[8] 37|19r30[36|8] 20r30[36|8] 21r30[36|8] 22r30[36|8]
-. 85r29[36|8] 85r78[36|8]
-196V16*To_String{string} 37|85s35[36|8] 85s84[36|8]
-199V16*To_Big_Unsigned{41R9[36|8]} 37|19s36[36|8] 20s36[36|8] 21s36[36|8]
-. 22s36[36|8] 52s19[36|8] 52s46[36|8] 52s71[36|8] 60s13[36|8] 60s34[36|8]
-. 60s55[36|8] 74s31[36|8]
+39k22*Big_Numbers 399e29 36|2w50 3r35 7r35 37|4w50 5r35
+41R9*Big_Unsigned 36|9r19[7] 13r38[7] 17r57[7] 18r55[7] 20r32[7] 21r30[7]
+. 23r56[7] 23r81[7] 24r31[7] 24r52[7] 24r78[7] 25r35[7] 25r56[7] 25r77[7]
+. 25r97[7] 26r30[7] 26r51[7] 27r33[7] 37|11r11[36|7] 12r11[36|7] 13r11[36|7]
+. 14r11[36|7] 28r32[36|7] 29r14[36|7] 47r30[36|7] 49r13[36|7] 50r13[36|7]
+. 64r56[36|7] 64r81[36|7] 70r30[36|7] 70r51[36|7] 70r77[36|7] 71r35[36|7]
+. 71r56[36|7] 71r77[36|7] 71r97[36|7] 72r30[36|7] 72r51[36|7] 73r33[36|7]
+. 74r14[36|7] 75r16[36|7]
+98V14*"+"{41R9[36|7]} 37|81s15[36|7] 81s96[36|7] 81s100[36|7]
+102V14*"-"{41R9[36|7]} 37|81s20[36|7] 81s39[36|7] 81s58[36|7] 81s77[36|7]
+. 81s104[36|7]
+108V14*"*"{41R9[36|7]} 37|31s19[36|7] 55s21[36|7] 81s64[36|7] 81s72[36|7]
+. 81s83[36|7] 81s91[36|7]
+120V14*"/"{41R9[36|7]} 37|55s26[36|7] 67s56[36|7]
+131V14*"**"{41R9[36|7]} 37|31s14[36|7] 31s23[36|7] 53s17[36|7] 55s29[36|7]
+. 55s67[36|7] 67s101[36|7] 81s31[36|7] 81s50[36|7]
+140K12*Utils 36|11r12[7] 14r28[7] 37|11r30[36|7] 12r30[36|7] 13r30[36|7]
+. 14r30[36|7] 67r29[36|7] 67r78[36|7]
+196V16*To_String{string} 37|67s35[36|7] 67s84[36|7]
+199V16*To_Big_Unsigned{41R9[36|7]} 36|14r34[7] 37|11s36[36|7] 12s36[36|7]
+. 13s36[36|7] 14s36[36|7] 41s13[36|7] 41s34[36|7] 41s55[36|7] 55s31[36|7]
+. 78s14[36|7]
 X 32 interfac.ads
 74M9*Unsigned_32
 77M9*Unsigned_64
 X 36 ot.ads
-4K9*OT 24l5 24e7 37|7b14 88l5 88t7
-8K12*LN[25|39] 10r16 11r11 12r9 15r54 16r52 18r29 19r27 22r53 22r78 37|19r8
-. 19r27 20r8 20r27 21r8 21r27 22r8 22r27 40r29 41r11 66r27 68r10 69r10 82r53
-. 82r78 85r26 85r75
-14A9*TwoDArray(25|41R9[8])<integer><integer> 19r69 22r33 37|66r69 67r9 82r33
-16A9*ArrUnsigned(25|41R9[8])<integer> 19r50 20r29 21r23 37|49r28 50r17 57r23
-. 58r12 66r50
-18V13*computeY{25|41R9[8]} 37|40b13 45t7
-19V13*ComputeC{14A9} 19>23 19>45 37|66b13 80l8 80t16
-19r23 Y{25|41R9[8]} 37|66b23 74r25
-19a45 MG{16A9} 37|66b45 74r15
-20V13*messages{16A9} 37|49b12 54t6
-21V13*KK{16A9} 37|57b13 63t6 72s20 74s70
-22V13*RecieveMessage{25|41R9[8]} 22>29 22>44 37|82b13 86t7
-22a29 Z{14A9} 37|82b29 85r10 85r59
-22r44 choice{25|41R9[8]} 37|82b44 85r45
+4K9*OT 29l5 29e7 37|7b14 84l5 84t7
+7K12*LN[25|39] 9r16 10r11 11r9 13r35 14r25 17r54 18r52 20r29 21r27 23r53
+. 23r78 24r28 24r49 24r75 25r32 25r53 25r74 25r94 26r27 26r48 27r30 37|11r8
+. 11r27 12r8 12r27 13r8 13r27 14r8 14r27 28r29 29r11 47r27 49r10 50r10 64r53
+. 64r78 67r26 67r75 70r27 70r48 70r74 71r32 71r53 71r74 71r94 72r27 72r48
+. 73r30 74r11 75r13
+13V14*"+"=14:34{25|41R9[7]}
+13a17 S{string}
+16A9*TwoDArray(25|41R9[7])<integer><integer> 21r69 23r33 37|47r69 48r9 64r33
+18A9*ArrUnsigned(25|41R9[7])<integer> 21r50 22r23 37|38r23 39r12 47r50
+20V13*computeY{25|41R9[7]} 37|28b13 33t7
+21V13*ComputeC{16A9} 21>23 21>45 37|47b13 61l8 61t16
+21r23 Y{25|41R9[7]} 37|47b23 55r25
+21a45 MG{18A9} 37|47b45 55r15
+22V13*KK{18A9} 37|38b13 44t6 53s20 55s70
+23V13*RecieveMessage{25|41R9[7]} 23>29 23>44 37|64b13 68t7
+23a29 Z{16A9} 37|64b29 67r10 67r59
+23r44 choice{25|41R9[7]} 37|64b44 67r45
+24V14*Distance{25|41R9[7]} 24>24 24>45 24>66 25>23 25>49 25>70 25>91 26>22
+. 26>44 37|70b13 83l8 83t16
+24r24 T{25|41R9[7]} 37|70b23 81r13
+24r45 W{25|41R9[7]} 37|70b44 81r17
+24r66 choiceA{25|41R9[7]} 37|70b65 81r23 81r65
+25r23 choiceB{25|41R9[7]} 37|71b23 81r42 81r84
+25r49 a{25|41R9[7]} 37|71b49 81r98
+25r70 b{25|41R9[7]} 37|71b70 81r102
+25r91 R{25|41R9[7]} 37|71b91 81r106
+26r22 x1{25|41R9[7]} 37|72b22 81r73
+26r44 y1{25|41R9[7]} 37|72b44 81r92
 X 37 ot.adb
 9i4 p{integer}
-19r4 h{25|41R9[36|8]} 43r22 74r28
-20r4 g{25|41R9[36|8]} 43r13 72r15
-21r4 r{25|41R9[36|8]} 43r16 85r104
-22r4 a{25|41R9[36|8]} 43r25 85r94
-24V10 RandomGen{integer} 24b10 32t5
-25K12 Rand_Int[9|44] 26r11 29r4 30r11
-26r4 seed{9|50R9[25]} 29r19 30r27
-27i4 Num{20|7I12} 30m4 31r11
-41r7 Y{25|41R9[36|8]} 43m7 44r14
-50a7 Message{36|16A9} 52m7 53r14
-58a7 K{36|16A9} 60m7 62r14
-67a6 Z{36|14A9} 71r15 75m10 76m10 79r17
-68r6 v{25|41R9[36|8]} 74m10 76r20
-69r6 w{25|41R9[36|8]} 72m10 75r20
-71i10 I{integer} 72r23 74r18 74r61 74r73 75r12 76r12
+11r4 h{25|41R9[36|7]} 31r22 55r28
+12r4 g{25|41R9[36|7]} 31r13 53r15
+13r4 r{25|41R9[36|7]} 31r16 67r104
+14r4 a{25|41R9[36|7]} 31r25 67r94
+16V10 RandomGen{integer} 16b10 24t5
+17K12 Rand_Int[9|44] 18r11 21r4 22r11
+18r4 seed{9|50R9[17]} 21r19 22r27
+19i4 Num{20|7I12} 22m4 23r11
+29r7 Y{25|41R9[36|7]} 31m7 32r14
+39a7 K{36|18A9} 41m7 43r14
+48a6 Z{36|16A9} 52r15 56m10 57m10 60r16
+49r6 v{25|41R9[36|7]} 55m10 57r20
+50r6 w{25|41R9[36|7]} 53m10 56r20
+52i10 I{integer} 53r23 55r18 55r61 55r73 56r12 57r12
+74r7 D{25|41R9[36|7]} 81m7 82r14
+75r7 Two{25|41R9[36|7]} 78m7 81r34 81r53 81r61 81r80
 X 38 system.ads
 67M9*Address
 X 48 s-memory.ads

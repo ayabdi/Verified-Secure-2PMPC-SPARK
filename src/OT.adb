@@ -7,14 +7,6 @@ pragma Elaborate_All(Crypto.Types.Big_Numbers);
 package body OT is
 
    p : Integer := 5;
- --  h : Integer := 2;
-   --g : Integer := 5;
-
-   --Reciever
-
-   -- reciever random r and choice 'a'
-   --r : Integer := 1;
- --  a : Integer := 2;
 
    h : LN.Big_Unsigned := LN.Utils.To_Big_Unsigned("2");
    g : LN.Big_Unsigned := LN.Utils.To_Big_Unsigned("5");
@@ -31,10 +23,6 @@ begin
    return Num;
  end;
 
-
-  -- generators h and g
-
-
    -- reciever compute Y = g^r * h^a
 
    function computeY return LN.Big_Unsigned is
@@ -44,14 +32,7 @@ begin
       return Y;
    end;
 
-   -- Sender
-   -- messages
-  function messages return ArrUnsigned is
-      Message : ArrUnsigned(m);
-   begin
-      Message := (To_Big_Unsigned("4345234"),To_Big_Unsigned("23458"),To_Big_Unsigned("23454"));
-      return Message;
-  end;
+
 
    -- random k
    function KK return ArrUnsigned is
@@ -76,8 +57,9 @@ begin
          Z(I,2) := v;
       end loop;
       --Put_Line("Final result");
-         return Z;
+        return Z;
    end ComputeC;
+
 
    function RecieveMessage (Z : TwoDArray; choice : LN.Big_Unsigned ) return LN.Big_Unsigned is
    begin
@@ -85,4 +67,18 @@ begin
          Z(Integer'Value(LN.Utils.To_String(choice)),2)/ (Z(Integer'Value(LN.Utils.To_String(a)),1) ** r);
    end;
 
+   function Distance (T : LN.Big_Unsigned; W : LN.Big_Unsigned; choiceA: LN.Big_Unsigned;
+                      choiceB: LN.Big_Unsigned; a : LN.Big_Unsigned; b : LN.Big_Unsigned; R: LN.Big_Unsigned;
+                     x1 : LN.Big_Unsigned; y1: LN.Big_Unsigned)
+                      return LN.Big_Unsigned is
+      D : Ln.Big_Unsigned;
+      Two : LN.Big_Unsigned ;
+      --SQRT : LN.Big_Unsigned ;
+   begin
+      Two := To_Big_Unsigned("2");
+      --SQRT := To_Big_Unsigned("0.5");
+
+      D := (T + W  - (choiceA ** Two) - (choiceB ** Two) - (Two*choiceA*x1) - (Two*choiceB*y1) + a + b - R);
+      return D;
+   end Distance;
 end OT;

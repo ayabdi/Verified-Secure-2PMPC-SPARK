@@ -1,0 +1,576 @@
+V "GNAT Lib v2019"
+A -x
+A ada
+A -gnatA
+A -gnatc
+P GP FX
+
+RN
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U bob%b			bob.adb			eafadb9d OO PK
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s  a-nudira.adb	a-nudira.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W alice%s		alice.adb		alice.ali
+W ot%s			ot.adb			ot.ali
+W random%s		random.adb		random.ali
+
+U bob%s			bob.ads			f811bfa0 OO PK
+W alice%s		alice.adb		alice.ali
+W common%s		common.ads		common.ali
+W ot%s			ot.adb			ot.ali
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-comlin.ads		20190518041256 4aa66568 ada.command_line%s
+D a-inteio.ads		20190518041256 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-numeri.ads		20190518041254 bb51c45a ada.numerics%s
+D a-nudira.ads		20190518041254 71e55def ada.numerics.discrete_random%s
+D a-nudira.adb		20190518041254 72908cdb ada.numerics.discrete_random%b
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-tiinio.ads		20190518041254 390edddb ada.text_io.integer_io%s
+D alice.ads		20200422185138 fe762d62 alice%s
+D bob.ads		20200424124402 63b782ff bob%s
+D bob.adb		20200424124312 68b01f48 bob%b
+D common.ads		20200422101218 fa3e4f3b common%s
+D crypto.ads		20180402102852 b0d04738 crypto%s
+D crypto-types.ads	20180402102852 d664f69b crypto.types%s
+D crypto-types-big_numbers.ads  20180402102852 19da6856 crypto.types.big_numbers%s
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D ot.ads		20200422185038 9fee5f06 ot%s
+D random.ads		20200420191244 a93f3568 random%s
+D system.ads		20190518041256 32a08138 system%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-rannum.ads		20190518041256 99ade2f2 system.random_numbers%s
+D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+G a Z
+X 1 ada.ads
+16K9*Ada 20e8 13|2r6 3r5 4r6 4r31 5r6
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 13|4w10 4r35
+59U14*Get 13|15s8[3|18] 22s7[3|18]
+X 5 a-numeri.ads
+16K13*Numerics 32e17 13|5r10
+X 6 a-nudira.ads
+44k22*Discrete_Random 75e33 13|5w19
+X 9 a-textio.ads
+57K13*Text_IO 727e16 13|2w10 3r9
+X 11 alice.ads
+3K9*Alice 27e10 12|2w6 2r30 13|2w19 3r18
+X 12 bob.ads
+3K9*Bob 13l5 13e8 13|7b14 58l5 58t8
+8V13*randomR{14|9A9} 13|27b13 34l8 34t15 43s83
+9V13*GetX2{integer} 13|12b11 17l5 17t10
+10V13*GetY2{integer} 13|19b11 24l8 24t13
+11V13*ComputeT{20|16A9} 11>24 11>42 11>59 13|37b13 49l8 49t16
+11a24 XYarr{14|9A9} 13|37b24 41r16 43r61
+11i42 R{14|7I12} 13|37b42 43r91
+11i59 XY2{integer} 13|37b59 43r72
+X 13 bob.adb
+13i8 x2{integer} 15m13 16r11
+20i8 y2{integer} 22m12 23r11
+28a7 Arr{14|9A9} 30r16 31m10 33r14
+30i11 I{integer} 31r14
+38a7 Arr{20|16A9} 43m10 48r14
+41i11 I{integer} 43r14 43r67
+X 14 common.ads
+4K9*Common 12|2w18 2r42 14|14e11
+7I12*Rand_Range{integer} 12|11r46 13|37r46
+8I12*m{integer} 13|28r23 38r26
+9A9*XY_array(integer)<integer> 12|8r28 11r32 13|27r28 28r14 37r32
+X 20 ot.ads
+4K9*OT 12|2w13 2r37 13|2w26 20|24e7
+8K12*LN[17|39] 13|43r20
+16A9*ArrUnsigned(17|41R9[8])<integer> 12|11r81 13|37r81 38r13
+140K12*Utils 13|43r23[20|8] 20|213e13[8]
+199V16*To_Big_Unsigned{17|41R9[8]} 13|43s29[20|8]
+X 21 random.ads
+4K9*Random 13|2w30 3r25 31r20 21|6e11
+5V13*RandonGen{integer} 13|31s27
+
+QQ SPARKVERSION 2019 (20190517)
+GG EK_DIRECT_CALLS bob__randomr 1 random__randongen
+GG EK_GLOBALS bob__randomr local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 1 random__randongen FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS bob__getx2 1 ada__integer_text_io__get__2
+GG EK_GLOBALS bob__getx2 local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 ada__text_io__file_system proper_output 1 ada__text_io__file_system refined_proof_in 0 refined_input 1 ada__text_io__file_system refined_output 1 ada__text_io__file_system calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 ada__text_io__file_system LOCKS 0
+GG EK_DIRECT_CALLS bob__gety2 1 ada__integer_text_io__get__2
+GG EK_GLOBALS bob__gety2 local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 ada__text_io__file_system proper_output 1 ada__text_io__file_system refined_proof_in 0 refined_input 1 ada__text_io__file_system refined_output 1 ada__text_io__file_system calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 ada__text_io__file_system LOCKS 0
+GG EK_DIRECT_CALLS bob__computet 2 bob__randomr ot__ln__utils__to_big_unsigned__4
+GG EK_GLOBALS bob__computet local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 2 random__randongen ot__ln__utils__to_big_unsigned__4 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_DIRECT_CALLS bob 0
+GG EK_GLOBALS bob local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
+GG EK_FLOW_SCOPE system__random_numbers__random FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE system__file_control_block__afcb_free FALSE FALSE FALSE FALSE TRUE system__file_control_block VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__current_output__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__to_big_unsigned FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils__is_prime FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_bytes__12 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__big_numbers TRUE FALSE FALSE FALSE FALSE crypto__types
+GG EK_FLOW_SCOPE ada__text_io__current_error__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__shift_left__3 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__r_to_word FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__random__2 FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Osubtract__2 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__skip_page FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fputwc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE system__wch_con__get_wc_encoding_method FALSE FALSE FALSE FALSE TRUE system__wch_con VISIBLE_PART
+GG EK_FLOW_SCOPE ada__integer_text_io__put__2 FALSE FALSE FALSE FALSE TRUE ada__integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__shift_left FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE ada__streams__stream_element_arraySW FALSE FALSE FALSE FALSE TRUE ada__streams PRIVATE_PART
+GG EK_FLOW_SCOPE ada__text_io__put__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils__looks_like_a_prime FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__flush FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__setvbuf FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE crypto__types__to_bytes__13 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__create FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_words FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__random__3 FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE system__wch_con__get_wc_encoding_method__2 FALSE FALSE FALSE FALSE TRUE system__wch_con VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__shift_right__3 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Osubtract__3 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils__passed_miller_rabin_test FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__shift_right FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_bytes__14 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_bytes FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fputs FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__shift_left FALSE FALSE FALSE FALSE TRUE ot__ln PRIVATE_PART
+GG EK_FLOW_SCOPE system__random_numbers__random__4 FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln TRUE FALSE FALSE TRUE crypto__types__big_numbers TRUE ot VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__skip_page__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__wch_con__is_start_of_encoding FALSE FALSE FALSE FALSE TRUE system__wch_con VISIBLE_PART
+GG EK_FLOW_SCOPE ada__integer_text_io__get__3 FALSE FALSE FALSE FALSE TRUE ada__integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__put_line__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__look_ahead FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__streams TRUE FALSE FALSE FALSE FALSE ada
+GG EK_FLOW_SCOPE crypto__types__to_bytes__15 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__rotate_left__3 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__r_to_bytes FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Osubtract__4 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils__jacobi FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__rotate_left FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__tmpnam FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__shift_right FALSE FALSE FALSE FALSE TRUE ot__ln PRIVATE_PART
+GG EK_FLOW_SCOPE crypto__types__to_bytes__16 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__end_of_page FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__flush__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__free FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_bytes__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Omultiply FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__rotate_right__3 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams TRUE FALSE FALSE FALSE FALSE interfaces
+GG EK_FLOW_SCOPE ada__integer_text_io__put__3 FALSE FALSE FALSE FALSE TRUE ada__integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils__shift_left FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__rotate_right FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_bytes__17 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__tmpfile FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__byte0 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__random_discrete FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__freopen FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_line_length FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__russ FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ot TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE ada__text_io__look_ahead__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__open FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_b_block64 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__ungetc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__shift_left__4 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__end_of_page__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__byte1 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils__bit_length FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__get_random FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE ada__streams__read FALSE FALSE FALSE FALSE TRUE ada__streams VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__bit_length FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_b_block128 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__end_of_file FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__byte2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__karatsuba FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__binfield_utils TRUE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__shift_right__4 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl TRUE FALSE FALSE FALSE FALSE system
+GG EK_FLOW_SCOPE ot__ln__binfield_utils__b_add FALSE FALSE FALSE FALSE TRUE ot__ln__binfield_utils VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__lowest_set_bit FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__unlink FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_b_block192 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__byte3 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get_immediate FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fseek FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__karatsuba_p FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ada__streams__write FALSE FALSE FALSE FALSE TRUE ada__streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__file_typeDefault_Initial_Condition FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__length_in_bytes FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__reset FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_b_block256 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__rotate_left__4 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__end_of_file__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_line_length__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__computey FALSE FALSE FALSE FALSE TRUE ot VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_dword FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__binfield_utils__b_sub FALSE FALSE FALSE FALSE TRUE ot__ln__binfield_utils VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__random_float FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__open FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ot__computec FALSE FALSE FALSE FALSE TRUE ot VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Oeq FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__gcd FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__reset__2 FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_w_block160 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_col FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__toom_cook FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__r_to_dword FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__rotate_right__4 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__streams__read_sea FALSE FALSE FALSE FALSE TRUE ada__streams PRIVATE_PART
+GG EK_FLOW_SCOPE ot__ln__binfield_utils__b_mult FALSE FALSE FALSE FALSE TRUE ot__ln__binfield_utils VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__close FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get_immediate__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fseek64 FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_w_block256 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_page_length FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_left FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__fwrite FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_dwords FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__generic_mod_aux TRUE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__close FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Olt FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__reset__3 FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__to_bytes FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE ot__messages FALSE FALSE FALSE FALSE TRUE ot VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__toom_cook_p FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ot__kk FALSE FALSE FALSE FALSE TRUE ot VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_w_block512 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_bytes__3 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__streams__write_sea FALSE FALSE FALSE FALSE TRUE ada__streams PRIVATE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__to_big_unsigned__2 FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE ot__recievemessage FALSE FALSE FALSE FALSE TRUE ot VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__shift_left__5 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_right FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__binfield_utils__b_div FALSE FALSE FALSE FALSE TRUE ot__ln__binfield_utils VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__read FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__delete FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Ogt FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__reset__4 FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_dw_block256 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get_immediate__3 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Omultiply__2 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE bob TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE crypto__types__r_to_bytes__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__ftell FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__to_words FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE bob__randomr FALSE FALSE FALSE FALSE TRUE bob VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_dw_block384 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__shift_left__6 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_right_arithmetic FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_bytes__4 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Ole FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE bob__getx2 FALSE FALSE FALSE FALSE TRUE bob VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__to_big_unsigned__3 FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__reset__5 FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_page_length__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Omultiply__3 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ada__command_line TRUE FALSE FALSE FALSE FALSE ada
+GG EK_FLOW_SCOPE ot__ln__binfield_utils__b_square FALSE FALSE FALSE FALSE TRUE ot__ln__binfield_utils VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__reset FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__ftell64 FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__stdin FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE bob__gety2 FALSE FALSE FALSE FALSE TRUE bob VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_col__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE crypto__types__to_dw_block512 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__write FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__command_line__argument_count FALSE FALSE FALSE FALSE TRUE ada__command_line VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__byte0__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__stdout FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__to_string FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE bob__computet FALSE FALSE FALSE FALSE TRUE bob VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__shift_right__5 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__rotate_left FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Oge FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__reset__6 FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__stderr FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__command_line__argument FALSE FALSE FALSE FALSE TRUE ada__command_line VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get_immediate__4 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_dw_block1024 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Odivide FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__binfield_utils__b_mod FALSE FALSE FALSE FALSE TRUE ot__ln__binfield_utils VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__getenv FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__byte1__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__line_length FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__to_big_unsigned__4 FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_dw_block8192 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__shift_right__6 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__rotate_right FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__min FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__byte2__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__reset__7 FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__setvbuf FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__command_line__command_name FALSE FALSE FALSE FALSE TRUE ada__command_line VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Odivide__2 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__binfield_utils__b_inverse FALSE FALSE FALSE FALSE TRUE ot__ln__binfield_utils VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__isatty FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__put FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__strlen FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oxor__5 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE alice TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE system__parameters TRUE FALSE FALSE FALSE FALSE system
+GG EK_FLOW_SCOPE crypto__types__byte3__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__reset__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oxor FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE alice__getx FALSE FALSE FALSE FALSE TRUE alice VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get__3 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_left__2 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__line_length__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__save FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__max FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Odivide__3 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE alice__gety FALSE FALSE FALSE FALSE TRUE alice VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__lseek FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__byte4 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__command_line__set_exit_status FALSE FALSE FALSE FALSE TRUE ada__command_line VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__put_line FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oxor__6 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__strncpy FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__page_length FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE alice__randoma FALSE FALSE FALSE FALSE TRUE alice VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oxor__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_right__2 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__reset__8 FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE ada__numerics__discrete_random TRUE FALSE FALSE FALSE FALSE ada__numerics
+GG EK_FLOW_SCOPE alice__randomb FALSE FALSE FALSE FALSE TRUE alice VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Oeq__2 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__byte5 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE random TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE ot__ln__Oxor FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__feof FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE alice__storea FALSE FALSE FALSE FALSE TRUE alice VISIBLE_PART
+GG EK_FLOW_SCOPE random__randongen FALSE FALSE FALSE FALSE TRUE random VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oxor__7 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__big_div FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get__4 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__parameters__default_stack_size FALSE FALSE FALSE FALSE TRUE system__parameters VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__byte6 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oadd FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_right_arithmetic__2 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__malloc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__image FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE system__parameters__minimum_stack_size FALSE FALSE FALSE FALSE TRUE system__parameters VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__page_length__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__ferror FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Oeq__3 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE alice__generatex FALSE FALSE FALSE FALSE TRUE alice VISIBLE_PART
+GG EK_FLOW_SCOPE ada__numerics TRUE FALSE FALSE FALSE FALSE ada
+GG EK_FLOW_SCOPE system__crtl__atoi FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__mode FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Oor FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE system__parameters__adjust_storage_size FALSE FALSE FALSE FALSE TRUE system__parameters VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__byte7 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oxor__8 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_line__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__new_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE alice__generatey FALSE FALSE FALSE FALSE TRUE alice VISIBLE_PART
+GG EK_FLOW_SCOPE system__file_control_block TRUE FALSE FALSE FALSE FALSE system
+GG EK_FLOW_SCOPE crypto__types__Oadd__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__rotate_left__2 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__memcpy FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Olt__2 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__put__3 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers__image__2 FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_word__3 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__short_div FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__clearerr FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Oand FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__name FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE alice__sequences FALSE FALSE FALSE FALSE TRUE alice VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oxor__9 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__afcb_allocate__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
+GG EK_FLOW_SCOPE system__random_numbers__value FALSE FALSE FALSE FALSE TRUE system__random_numbers VISIBLE_PART
+GG EK_FLOW_SCOPE crypto TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE crypto__types__Oand FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__rotate_right__2 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Olt__3 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE alice__sequencet FALSE FALSE FALSE FALSE TRUE alice VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__file_exists FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__dup FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__afcb_close__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
+GG EK_FLOW_SCOPE ot__ln__Oand__2 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__form FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__Olt FALSE FALSE FALSE FALSE TRUE system VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oxor__10 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__col FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types TRUE FALSE FALSE FALSE FALSE crypto
+GG EK_FLOW_SCOPE crypto__types__to_bytes__5 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__memmove FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils TRUE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__is_regular_file FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oxor__3 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__afcb_free__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
+GG EK_FLOW_SCOPE interfaces__shift_left__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Ogt__2 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils__add FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__dup2 FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE common TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE ada__text_io__new_line__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Oand__3 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE system__Ole FALSE FALSE FALSE FALSE TRUE system VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_string FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__is_open FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oxor__11 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__set_binary_mode FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__put__4 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__read__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
+GG EK_FLOW_SCOPE ada__text_io__col__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oadd__3 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__fileno FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_right__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_hex FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Ogt__3 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ada__integer_text_io TRUE FALSE FALSE TRUE ada__text_io__integer_io FALSE ada
+GG EK_FLOW_SCOPE interfaces__c_streams__set_text_mode FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_input FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Oexpon FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE system__Ogt FALSE FALSE FALSE FALSE TRUE system VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oxor__12 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils__sub FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fclose FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__mktemp FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__skip_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_hex__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oadd__4 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_right_arithmetic__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__shift_left FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_output FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Ole__2 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__write__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
+GG EK_FLOW_SCOPE system__Oge FALSE FALSE FALSE FALSE TRUE system VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Omod FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oadd__9 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__pclose FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__line__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fdopen FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_hex__3 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE ot__ln__mod_utils__div FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oadd__5 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_error FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__rotate_left__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__shift_right FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__page FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Ole__3 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__hex_to_bytes FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__Oeq FALSE FALSE FALSE FALSE TRUE system VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Omod__2 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__left_part FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__skip_line__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__popen FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__integer_text_io__get FALSE FALSE FALSE FALSE TRUE ada__integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__standard_input FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fflush FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE system__wch_con TRUE FALSE FALSE FALSE FALSE system
+GG EK_FLOW_SCOPE crypto__types__is_zero FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oxor__4 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__rotate_right__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__rotate_left FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__right_part FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Oge__2 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils__mult FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__page__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io TRUE FALSE FALSE FALSE FALSE ada
+GG EK_FLOW_SCOPE ada__text_io__standard_output FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils TRUE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__is_zero__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__swap FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fgetc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__standard_error FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oadd__6 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__end_of_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__realloc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get_line__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_left__4 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__rotate_right FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Oge__3 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__is_zero__3 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__set_mode FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__current_input FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils__pow FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__set_least_significant_bit FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE ada__integer_text_io__get__2 FALSE FALSE FALSE FALSE TRUE ada__integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fgets FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_bytes__6 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oadd__7 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__current_output FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_right__4 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__shift_left__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Oadd FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__full_name FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__set_most_significant_bit FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__end_of_line__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__rewind FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__current_error FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_bytes__7 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils__get_random FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__Oadd__8 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__is_odd FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__new_page FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_right_arithmetic__4 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__fread FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__shift_right__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Oadd__2 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_bytes__8 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fopen FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__rmdir FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__standard_input__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils__inverse FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__is_even FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get_line__3 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__integer_io TRUE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__eof_char FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
+GG EK_FLOW_SCOPE ada__streams__stream_element_arraySR FALSE FALSE FALSE FALSE TRUE ada__streams PRIVATE_PART
+GG EK_FLOW_SCOPE ada__text_io__standard_output__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_word FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_bytes__9 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__integer_text_io__put FALSE FALSE FALSE FALSE TRUE ada__integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__put FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__initialize_standard_files FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
+GG EK_FLOW_SCOPE interfaces__rotate_left__4 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__rotate_left__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE system__file_control_block__afcb_allocate FALSE FALSE FALSE FALSE TRUE system__file_control_block VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Oadd__3 FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__chdir FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__utils__inc FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE system__random_numbers TRUE FALSE FALSE FALSE FALSE system
+GG EK_FLOW_SCOPE ada__text_io__standard_error__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils__get_prime FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_bytes__10 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get_line__4 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__fread__2 FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE system__file_control_block__afcb_close FALSE FALSE FALSE FALSE TRUE system__file_control_block VISIBLE_PART
+GG EK_FLOW_SCOPE ada__io_exceptions TRUE FALSE FALSE FALSE FALSE ada
+GG EK_FLOW_SCOPE ot__ln__utils__dec FALSE FALSE FALSE FALSE TRUE ot__ln__utils VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__current_input__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fputc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__rotate_right__4 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__rotate_right__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__new_page__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__mod_utils__get_n_bit_prime FALSE FALSE FALSE FALSE TRUE ot__ln__mod_utils VISIBLE_PART
+GG EK_FLOW_SCOPE ot__ln__Osubtract FALSE FALSE FALSE FALSE TRUE ot__ln VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__mkdir FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_bytes__11 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__put_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE crypto__types__to_word__2 FALSE FALSE FALSE FALSE TRUE crypto__types VISIBLE_PART
+GG EK_REMOTE_STATES 1 ada__text_io__file_system
+GG EK_PREDEF_INIT_ENTITIES 1 ada__text_io__file_system
+GG EK_END_MARKER

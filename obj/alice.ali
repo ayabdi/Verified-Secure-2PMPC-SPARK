@@ -14,18 +14,19 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U alice%b		alice.adb		b96d74d3 NE OO PK
+U alice%b		alice.adb		70d092a2 NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.discrete_random%s
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W client%s		client.adb		client.ali
 W system%s		system.ads		system.ali
 Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-U alice%s		alice.ads		84af72a0 EE NE OO PK
+U alice%s		alice.ads		8a382aa2 EE NE OO PK
 W common%s		common.ads		common.ali
 W ot%s			ot.adb			ot.ali
 
@@ -37,25 +38,32 @@ D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
 D a-numeri.ads		20190518041256 bb51c45a ada.numerics%s
 D a-nudira.ads		20190518041256 71e55def ada.numerics.discrete_random%s
 D a-nudira.adb		20190518041256 72908cdb ada.numerics.discrete_random%b
+D a-reatim.ads		20190518041258 0240fc73 ada.real_time%s
 D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
 D a-tags.ads		20190518041258 491b781d ada.tags%s
 D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
-D alice.ads		20200420201752 0bc6388d alice%s
-D alice.adb		20200421212230 9bf14d78 alice%b
-D common.ads		20200422101218 fa3e4f3b common%s
+D alice.ads		20200427181840 fc320dc1 alice%s
+D alice.adb		20200427181902 0917b7df alice%b
+D client.ads		20200424161810 acaf299a client%s
+D common.ads		20200427181452 fd26ffd1 common%s
 D crypto.ads		20180402102852 b0d04738 crypto%s
 D crypto-types.ads	20180402102852 d664f69b crypto.types%s
 D crypto-types-big_numbers.ads  20180402102852 19da6856 crypto.types.big_numbers%s
 D interfac.ads		20190518041256 5ab55268 interfaces%s
+D i-c.ads		20190518041256 5421119b interfaces.c%s
+D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D ot.ads		20200421134950 75570516 ot%s
+D ot.ads		20200427182220 8b2cd8b2 ot%s
 D system.ads		20190518041258 32a08138 system%s
+D s-atacco.ads		20190518041258 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
 D s-exctab.ads		20190518041256 54135002 system.exception_table%s
 D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
 D s-imguns.ads		20190518041256 9ff43cf7 system.img_uns%s
+D s-multip.ads		20190518041256 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20190518041258 97504df8 system.os_interface%s
 D s-parame.ads		20190518041258 48ec542b system.parameters%s
 D s-rannum.ads		20190518041256 99ade2f2 system.random_numbers%s
 D s-rannum.adb		20190518041258 20ba1217 system.random_numbers%b
@@ -63,82 +71,108 @@ D s-ransee.ads		20190518041258 01a57b33 system.random_seed%s
 D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
 D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
 D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stausa.ads		20190518041256 017a0a05 system.stack_usage%s
 D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
 D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20190518041258 601f6b72 system.task_info%s
+D s-taspri.ads		20190518041258 6c1d93d4 system.task_primitives%s
+D s-taprop.ads		20190518041258 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20190518041258 b9d612e2 system.tasking%s
+D s-tassta.ads		20190518041258 cca55c94 system.tasking.stages%s
 D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
 D s-valuns.ads		20190518041258 35067db9 system.val_uns%s
 D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+D s-win32.ads		20190518041256 90ecf4e6 system.win32%s
 G a e
-G c Z s b [getx alice 9 13 none]
-G c Z s b [gety alice 11 13 none]
-G c Z s b [randoma alice 13 13 none]
-G c Z s b [randomb alice 15 13 none]
-G c Z s b [generatex alice 17 13 none]
-G c Z s b [generatey alice 19 13 none]
-G c Z s b [sequences alice 23 13 none]
-G c Z s b [sequencet alice 24 13 none]
-G c Z b b [randomgen alice 11 10 none]
+G c Z s b [getx alice 12 13 none]
+G c Z s b [gety alice 14 13 none]
+G c Z s b [randoma alice 16 13 none]
+G c Z s b [randomb alice 18 13 none]
+G c Z s b [storea alice 20 13 none]
+G c Z s b [generatex alice 22 13 none]
+G c Z s b [generatey alice 24 13 none]
+G c Z s b [sequences alice 28 13 none]
+G c Z s b [sequencet alice 29 13 none]
+G c Z b b [randomgen alice 12 10 none]
 X 1 ada.ads
-16K9*Ada 20e8 15|2r6 3r5 4r6 4r31 5r6 12r28
+16K9*Ada 20e8 16|2r6 3r5 4r6 4r31 5r6 13r28
 X 4 a-inteio.ads
-18K13*Integer_Text_IO[12|46] 15|4w10 4r35
+18K13*Integer_Text_IO[13|46] 16|4w10 4r35
 X 6 a-numeri.ads
-16K13*Numerics 32e17 15|5r10 12r32
+16K13*Numerics 32e17 16|5r10 13r32
 X 7 a-nudira.ads
-44k22*Discrete_Random 75e33 15|5w19 12r41
-50R9 Generator<29|63R9> 15|13r20[12]
-52V13 Random{integer} 15|17s20[12]
-55U14 Reset<29|100p14> 15|16s13[12]
+44k22*Discrete_Random 75e33 16|5w19 13r41
+50R9 Generator<36|63R9> 16|14r20[13]
+52V13 Random{integer} 16|18s20[13]
+55U14 Reset<36|100p14> 16|17s13[13]
 X 8 a-nudira.adb
-53V16 Random[29|83]{integer} 30|392b13[15|12]
-X 11 a-textio.ads
-57K13*Text_IO 727e16 15|2w10 3r9
-X 12 a-tiinio.ads
-59U14*Get 15|26s7[4|18] 34s7[4|18]
-X 14 alice.ads
-3K9*Alice 25l5 25e10 15|7b14 100l5 100t10
-9V13*getX{integer} 15|23b10 28l8 28t12
-11V13*getY{integer} 15|31b10 36l6 36t10
-13V13*randomA{16|9A9} 15|40b13 47l8 47t15 62s24
-15V13*randomB{16|9A9} 15|49b13 56l8 56t15 74s24
-17V13*GenerateX{16|9A9} 17>24 15|58b13 68l8 68t17
-17i24 X{integer} 15|58b24 62r20
-19V13*GenerateY{16|9A9} 19>24 15|70b13 81l8 81t17
-19i24 Y{integer} 15|70b23 74r20
-23V13*SequenceS{16|9A9} 23>23 15|84b13 89l8 89t17
-23i23 A{16|7I12} 15|84b23 87r20
-24V13*SequenceT{16|9A9} 24>23 15|91b14 96l8 96t17
-24i23 A{16|7I12} 15|91b24 94r20
-X 15 alice.adb
-11V10 RandomGen{integer} 11b10 21l8 21t17 44s20 53s20
-12K12 Rand_Int[7|44] 13r11 16r4 17r11
-13r4 seed{7|50R9[12]} 16r19 17r27
-14i4 Num{16|7I12} 17m4 20r11
+53V16 Random[36|83]{integer} 37|392b13[16|13]
+X 12 a-textio.ads
+57K13*Text_IO 727e16 16|2w10 3r9
+264U14*New_Line 16|134s13
+X 13 a-tiinio.ads
+59U14*Get 16|26s7[4|18] 34s7[4|18]
+80U14*Put 16|151s13[4|18]
+X 15 alice.ads
+3K9*Alice 35l5 35e10 16|7b14 44r17 46r12 60r18 61r13 76r17 78r13 110r17 112r13
+. 132r17 133r23 149r17 150r23 176l5 176t10
+7i4*choiceA{integer} 16|44r23 76r23 132r23
+8i4*choiceA_value{integer} 16|46m18 78m19 133r29
+9i4*choiceB{integer} 16|60r24 110r23 149r23
+10i4*choiceB_value{integer} 16|61m19 112m19 150r29
+12V13*getX{integer} 16|23b10 28l8 28t12
+14V13*getY{integer} 16|31b10 36l6 36t10
+16V13*randomA{18|10A9} 16|40b13 53l8 53t15
+18V13*randomB{18|10A9} 16|55b13 65l8 65t15
+20V13*storeA{integer} 20>21 16|93b13 98t10
+20i21 a{integer} 16|93b21 96r13
+22V13*GenerateX{18|10A9} 22>24 16|67b13 92l8 92t17
+22i24 X{integer} 16|67b24 77r23 82r23
+24V13*GenerateY{18|10A9} 24>24 16|101b13 125l8 125t17
+24i24 Y{integer} 16|101b23 111r23 116r23
+28V13*SequenceS{18|10A9} 16|128b13 143l8 143t17
+29V13*SequenceT{18|10A9} 16|145b12 157l8 157t17
+X 16 alice.adb
+12V10 RandomGen{integer} 12b10 21l8 21t17 45s23 48s23 59s20 73s20 107s20
+. 138s23 153s23
+13K12 Rand_Int[7|44] 14r11 17r4 18r11
+14r4 seed{7|50R9[13]} 17r19 18r27
+15i4 Num{18|7I12} 18m4 20r11
 24i7 x1{integer} 26m12 27r11
 32i7 y1{integer} 34m11 35r14
-41a7 Arr{16|9A9} 43r16 44m10 46r14
-43i11 I{integer} 44r14
-50a7 Arr{16|9A9} 52r15 53m10 55r13
-52i10 I{integer} 53r14
-59a7 Arr{16|9A9} 61r16 62m10 67r14
-61i11 I{integer} 62r14 62r32
-71a7 Arr{16|9A9} 73r16 74m10 80r14
-73i11 I{integer} 74r14 74r32
-85a7 Arr{16|9A9} 87m7 88r14
-92a7 Arr{16|9A9} 94m7 95r14
-X 16 common.ads
-4K9*Common 14|1w6 1r22 16|14e11
-7I12*Rand_Range{integer} 14|23r27 24r27 15|12r57 14r10 84r27 91r28
-8I12*m{integer} 15|41r23 50r22 59r23 71r23 85r22 92r22
-9A9*XY_array(integer)<integer> 14|13r28 15r28 17r44 19r44 23r46 24r46 15|40r28
-. 41r14 49r28 50r13 58r44 59r13 70r43 71r13 84r46 85r13 91r47 92r13
-X 20 interfac.ads
+41a7 Arr{18|10A9} 43r16 45m13 46r35 48m13 52r14
+43i11 I{integer} 44r13 45r17 46r39 48r17
+56a7 Arr{18|10A9} 58r15 59m10 61r36 64r13
+58i10 I{integer} 59r14 60r14 61r40
+68a7 Arr{18|10A9} 72r16 77m13 82m13 91r14
+69i7 Random{integer} 73m10 77r27 78r36 82r27
+72i11 I{integer} 76r13 77r17 82r17
+94i7 x{integer} 96m10 97r17
+102a7 Arr{18|10A9} 106r16 111m13 116m13 124r14
+103i7 Random{integer} 107m10 111r27 112r36 116r27
+106i11 I{integer} 110r13 111r17 116r17
+129a7 Arr{18|10A9} 131r16 133m13 138m13 142r14
+131i11 I{integer} 132r13 133r17 138r17
+146a7 Arr{18|10A9} 148r16 150m13 151r17 153m13 156r14
+148i11 I{integer} 149r13 150r17 151r21 153r17
+X 17 client.ads
+2K9*Client 16|6w6 17|9e11
+X 18 common.ads
+4K9*Common 15|1w6 1r22 18|15e11
+7I12*Rand_Range{integer} 16|13r57 15r10
+9I12*m{integer} 16|41r23 56r22 68r23 102r23 129r22 146r22
+10A9*XY_array(integer)<integer> 15|16r28 18r28 22r45 24r44 28r30 29r30 16|40r28
+. 41r14 55r28 56r13 67r44 68r13 101r43 102r13 128r30 129r13 145r29 146r13
+X 22 interfac.ads
 74M9*Unsigned_32
 77M9*Unsigned_64
-X 22 ot.ads
-4K9*OT 14|1w14 1r30 22|24e7
-X 29 s-rannum.ads
-75V13*Random{20|74M9} 30|221i21
-76V13*Random{20|77M9} 30|221i21
+X 26 ot.ads
+4K9*OT 15|1w14 1r30 26|29e7
+X 36 s-rannum.ads
+75V13*Random{22|74M9} 37|221i21
+76V13*Random{22|77M9} 37|221i21
+X 42 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 

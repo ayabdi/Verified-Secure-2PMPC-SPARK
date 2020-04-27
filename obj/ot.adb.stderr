@@ -1,8 +1,8 @@
-ot.ads:8:04: warning: in instantiation at crypto-types-big_numbers.ads:397
-ot.ads:8:04: warning: insufficient -O value
-ot.ads:8:04: warning: in instantiation at crypto-types-big_numbers-utils.adb:31
-ot.ads:8:04: warning: insufficient -O value
-ot.ads:8:04: warning: in instantiation at crypto-types-big_numbers-mod_utils.adb:32
-ot.ads:8:04: warning: insufficient -O value
-ot.ads:8:04: warning: in instantiation at crypto-types-big_numbers-binfield_utils.adb:47
-ot.ads:8:04: warning: insufficient -O value
+ot.ads:7:04: warning: in instantiation at crypto-types-big_numbers.ads:397
+ot.ads:7:04: warning: insufficient -O value
+ot.ads:7:04: warning: in instantiation at crypto-types-big_numbers-utils.adb:31
+ot.ads:7:04: warning: insufficient -O value
+ot.ads:7:04: warning: in instantiation at crypto-types-big_numbers-mod_utils.adb:32
+ot.ads:7:04: warning: insufficient -O value
+ot.ads:7:04: warning: in instantiation at crypto-types-big_numbers-binfield_utils.adb:47
+ot.ads:7:04: warning: insufficient -O value

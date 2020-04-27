@@ -1,0 +1,3 @@
+bob.adb:48:14: medium: "Arr" might not be initialized[#1]
+bob.ads:9:13: function with output global "Text_IO.File_System" is not allowed in SPARK[#2]
+bob.ads:10:13: function with output global "Text_IO.File_System" is not allowed in SPARK[#0]

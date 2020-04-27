@@ -57,9 +57,9 @@ package body ada_main is
    E194 : Short_Integer; pragma Import (Ada, E194, "crypto__types__random_source__provider_E");
    E186 : Short_Integer; pragma Import (Ada, E186, "crypto__types__random_E");
    E160 : Short_Integer; pragma Import (Ada, E160, "crypto__types__big_numbers_E");
+   E135 : Short_Integer; pragma Import (Ada, E135, "client_E");
    E152 : Short_Integer; pragma Import (Ada, E152, "ot_E");
    E137 : Short_Integer; pragma Import (Ada, E137, "alice_E");
-   E135 : Short_Integer; pragma Import (Ada, E135, "client_E");
    E267 : Short_Integer; pragma Import (Ada, E267, "random_E");
    E265 : Short_Integer; pragma Import (Ada, E265, "bob_E");
    E263 : Short_Integer; pragma Import (Ada, E263, "server_E");
@@ -396,11 +396,11 @@ package body ada_main is
       Crypto.Types.Random'Elab_Body;
       E186 := E186 + 1;
       E160 := E160 + 1;
+      Client'Elab_Spec;
       OT'ELAB_SPEC;
       E137 := E137 + 1;
       OT'ELAB_BODY;
       E152 := E152 + 1;
-      Client'Elab_Spec;
       Client'Elab_Body;
       E135 := E135 + 1;
       E267 := E267 + 1;

@@ -35,7 +35,7 @@ D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20190518041256 eff36322 ada.unchecked_deallocation%s
-D client.ads		20200420190954 acaf299a client%s
+D client.ads		20200424161810 acaf299a client%s
 D gnat.ads		20190518041258 b5988c27 gnat%s
 D g-socket.ads		20190518041258 605fb491 gnat.sockets%s
 D interfac.ads		20190518041256 5ab55268 interfaces%s

@@ -19,8 +19,11 @@ package body Server is
       D : LN.Big_Unsigned;
       X2: Integer;
       Y2: Integer;
+      R : XY_array(1..4);
       Xarr : XY_array(m);
       Yarr : XY_array(m);
+      Sarr : XY_array(m);
+      Tarr : XY_array(m);
      -- T : XY_array(m);
 
    begin
@@ -38,6 +41,12 @@ package body Server is
       Channel := Stream (Socket);
       -----------------------------------------------------------------------------------------------------------------------------------------
       -----------------------------------------------------------------------------------------------------------------------------------------
+
+       -- Set Random sequence R
+      R := (2,3,4,5);
+      -- send R total
+      Integer'Output(Channel , Bob.totalR(R));
+
       -- Bob recieves Random sequence X from Alice
       Xarr := XY_array'Input (Channel);
 
@@ -45,11 +54,13 @@ package body Server is
       Put_Line("Bob input x2");
       X2 := Bob.GetX2;
 
+
+
       -- (Oblivious Transfer)Bob recieves Y
       C :=  LN.Big_Unsigned'Input (Channel);
 
       --Bob Computes C and sends it back to Y
-      TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeT(Xarr, 1 , X2)));
+      TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeT(Xarr, R(1) , X2)));
 
       ----------------------------------------------------------------------------------------------------------------------------------------
      -- Bob recieves Random sequence Y from Alice
@@ -60,7 +71,19 @@ package body Server is
       Y2 := Bob.GetY2;
 
       --Bob Computes C for Y and sends it to ALice
-      TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeT(Yarr, 1 , Y2)));
+      TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeT(Yarr, R(2) , Y2)));
+
+      -- Bob recieves Random sequence A from Alice
+      Sarr := XY_array'Input (Channel);
+
+      --Bob Computes C for SequanceA and sends it to ALice
+      TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeA(Sarr, R(3) , X2)));
+
+      -- Bob recieves Random sequence A from Alice
+      Tarr := XY_array'Input (Channel);
+
+      --Bob Computes C for Sequance B and sends it to ALice
+      TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeA(Tarr, R(4) , Y2)));
    end Worker;
 
 

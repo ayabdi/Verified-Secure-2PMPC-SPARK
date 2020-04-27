@@ -303,13 +303,13 @@ package ada_main is
    pragma Export (C, u00132, "system__val_unsB");
    u00133 : constant Version_32 := 16#33208002#;
    pragma Export (C, u00133, "system__val_unsS");
-   u00134 : constant Version_32 := 16#d5b17d89#;
+   u00134 : constant Version_32 := 16#58f158ce#;
    pragma Export (C, u00134, "clientB");
    u00135 : constant Version_32 := 16#acaf299a#;
    pragma Export (C, u00135, "clientS");
-   u00136 : constant Version_32 := 16#b96d74d3#;
+   u00136 : constant Version_32 := 16#70d092a2#;
    pragma Export (C, u00136, "aliceB");
-   u00137 : constant Version_32 := 16#84af72a0#;
+   u00137 : constant Version_32 := 16#8a382aa2#;
    pragma Export (C, u00137, "aliceS");
    u00138 : constant Version_32 := 16#cd2959fb#;
    pragma Export (C, u00138, "ada__numericsS");
@@ -335,11 +335,11 @@ package ada_main is
    pragma Export (C, u00148, "system__task_lockS");
    u00149 : constant Version_32 := 16#3d84d1b9#;
    pragma Export (C, u00149, "system__win32__extS");
-   u00150 : constant Version_32 := 16#54ca9a56#;
+   u00150 : constant Version_32 := 16#53d22abc#;
    pragma Export (C, u00150, "commonS");
-   u00151 : constant Version_32 := 16#3e9f2451#;
+   u00151 : constant Version_32 := 16#3cd1c8ea#;
    pragma Export (C, u00151, "otB");
-   u00152 : constant Version_32 := 16#72e1927e#;
+   u00152 : constant Version_32 := 16#8b82ff30#;
    pragma Export (C, u00152, "otS");
    u00153 : constant Version_32 := 16#3b5cd14a#;
    pragma Export (C, u00153, "ada__command_lineB");
@@ -559,17 +559,17 @@ package ada_main is
    pragma Export (C, u00260, "system__pool_sizeS");
    u00261 : constant Version_32 := 16#c86f510c#;
    pragma Export (C, u00261, "system__os_constantsS");
-   u00262 : constant Version_32 := 16#5292be73#;
+   u00262 : constant Version_32 := 16#5de92312#;
    pragma Export (C, u00262, "serverB");
    u00263 : constant Version_32 := 16#0d6e03da#;
    pragma Export (C, u00263, "serverS");
-   u00264 : constant Version_32 := 16#3dfdb238#;
+   u00264 : constant Version_32 := 16#755b1f68#;
    pragma Export (C, u00264, "bobB");
-   u00265 : constant Version_32 := 16#1c96ca00#;
+   u00265 : constant Version_32 := 16#2b0eaa7c#;
    pragma Export (C, u00265, "bobS");
    u00266 : constant Version_32 := 16#ab73b6a9#;
    pragma Export (C, u00266, "randomB");
-   u00267 : constant Version_32 := 16#22e427bc#;
+   u00267 : constant Version_32 := 16#25fc9756#;
    pragma Export (C, u00267, "randomS");
 
    --  BEGIN ELABORATION ORDER
@@ -827,11 +827,11 @@ package ada_main is
    --  crypto.types.random%b
    --  crypto.types.big_numbers%s
    --  crypto.types.big_numbers%b
+   --  client%s
    --  ot%s
    --  alice%s
    --  alice%b
    --  ot%b
-   --  client%s
    --  client%b
    --  random%s
    --  random%b

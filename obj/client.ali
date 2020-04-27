@@ -19,7 +19,7 @@ RV SPARK_05
 RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=1
 
-U client%b		client.adb		d5b17d89 OO PK
+U client%b		client.adb		58f158ce OO PK
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.streams%s		a-stream.adb		a-stream.ali
@@ -30,6 +30,7 @@ W common%s		common.ads		common.ali
 W gnat%s		gnat.ads		gnat.ali
 W gnat.sockets%s	g-socket.adb		g-socket.ali
 W ot%s			ot.adb			ot.ali  AD
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
@@ -59,10 +60,10 @@ D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20190518041256 eff36322 ada.unchecked_deallocation%s
-D alice.ads		20200420201752 0bc6388d alice%s
-D client.ads		20200420190954 acaf299a client%s
-D client.adb		20200421214642 c551ceeb client%b
-D common.ads		20200422101218 fa3e4f3b common%s
+D alice.ads		20200427181840 fc320dc1 alice%s
+D client.ads		20200424161810 acaf299a client%s
+D client.adb		20200427181840 4686b3ae client%b
+D common.ads		20200427181452 fd26ffd1 common%s
 D crypto.ads		20180402102852 b0d04738 crypto%s
 D crypto-types.ads	20180402102852 d664f69b crypto.types%s
 D crypto-types-big_numbers.ads  20180402102852 19da6856 crypto.types.big_numbers%s
@@ -72,7 +73,7 @@ D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D ot.ads		20200421134950 75570516 ot%s
+D ot.ads		20200427182220 8b2cd8b2 ot%s
 D system.ads		20190518041258 32a08138 system%s
 D s-atacco.ads		20190518041258 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
@@ -80,6 +81,7 @@ D s-exctab.ads		20190518041256 54135002 system.exception_table%s
 D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
 D s-finmas.ads		20190518041256 7811a767 system.finalization_masters%s
 D s-finroo.ads		20190518041258 4ff27390 system.finalization_root%s
+D s-imgint.ads		20190518041256 02dbe0c2 system.img_int%s
 D s-multip.ads		20190518041256 38ac9f73 system.multiprocessors%s
 D s-oscons.ads		20190518135108 3e023549 system.os_constants%s
 D s-osinte.ads		20190518041258 97504df8 system.os_interface%s
@@ -110,68 +112,94 @@ G c b b b [b client 8 1 none]
 G c Z s b [workerTK client 4 9 none]
 G c Z s b [start client__worker 5 13 none]
 G c Z s s [workerTKVIP client 4 4 none]
-G r s twodarray [b client 8 1 none] [twodarrayIP ot 14 9 none]
-G r c none [b client 8 1 none] [getx alice 9 13 none]
-G r c none [b client 8 1 none] [generatex alice 17 13 none]
-G r c none [b client 8 1 none] [computey ot 18 13 none]
-G r c none [b client 8 1 none] [to_big_unsigned ot__ln__utils 199 16 8_4]
-G r c none [b client 8 1 none] [recievemessage ot 22 13 none]
-G r c none [b client 8 1 none] [to_string ot__ln__utils 196 16 8_4]
-G r c none [b client 8 1 none] [gety alice 11 13 none]
-G r c none [b client 8 1 none] [generatey alice 19 13 none]
-G r s twodarray [start client__worker 5 13 none] [twodarrayIP ot 14 9 none]
-G r c none [start client__worker 5 13 none] [getx alice 9 13 none]
-G r c none [start client__worker 5 13 none] [generatex alice 17 13 none]
-G r c none [start client__worker 5 13 none] [computey ot 18 13 none]
-G r c none [start client__worker 5 13 none] [to_big_unsigned ot__ln__utils 199 16 8_4]
-G r c none [start client__worker 5 13 none] [recievemessage ot 22 13 none]
-G r c none [start client__worker 5 13 none] [to_string ot__ln__utils 196 16 8_4]
-G r c none [start client__worker 5 13 none] [gety alice 11 13 none]
-G r c none [start client__worker 5 13 none] [generatey alice 19 13 none]
-G r s twodarray [workerTK client 4 9 none] [twodarrayIP ot 14 9 none]
-G r c none [workerTK client 4 9 none] [getx alice 9 13 none]
-G r c none [workerTK client 4 9 none] [generatex alice 17 13 none]
-G r c none [workerTK client 4 9 none] [computey ot 18 13 none]
-G r c none [workerTK client 4 9 none] [to_big_unsigned ot__ln__utils 199 16 8_4]
-G r c none [workerTK client 4 9 none] [recievemessage ot 22 13 none]
-G r c none [workerTK client 4 9 none] [to_string ot__ln__utils 196 16 8_4]
-G r c none [workerTK client 4 9 none] [gety alice 11 13 none]
-G r c none [workerTK client 4 9 none] [generatey alice 19 13 none]
+G r s twodarray [b client 8 1 none] [twodarrayIP ot 16 9 none]
+G r c none [b client 8 1 none] [getx alice 12 13 none]
+G r c none [b client 8 1 none] [generatex alice 22 13 none]
+G r c none [b client 8 1 none] [computey ot 20 13 none]
+G r c none [b client 8 1 none] [to_big_unsigned ot__ln__utils 199 16 7_4]
+G r c none [b client 8 1 none] [recievemessage ot 23 13 none]
+G r c none [b client 8 1 none] [gety alice 14 13 none]
+G r c none [b client 8 1 none] [generatey alice 24 13 none]
+G r c none [b client 8 1 none] [sequences alice 28 13 none]
+G r c none [b client 8 1 none] [sequencet alice 29 13 none]
+G r c none [b client 8 1 none] [distance ot 24 14 none]
+G r c none [b client 8 1 none] [to_string ot__ln__utils 196 16 7_4]
+G r s twodarray [start client__worker 5 13 none] [twodarrayIP ot 16 9 none]
+G r c none [start client__worker 5 13 none] [getx alice 12 13 none]
+G r c none [start client__worker 5 13 none] [generatex alice 22 13 none]
+G r c none [start client__worker 5 13 none] [computey ot 20 13 none]
+G r c none [start client__worker 5 13 none] [to_big_unsigned ot__ln__utils 199 16 7_4]
+G r c none [start client__worker 5 13 none] [recievemessage ot 23 13 none]
+G r c none [start client__worker 5 13 none] [gety alice 14 13 none]
+G r c none [start client__worker 5 13 none] [generatey alice 24 13 none]
+G r c none [start client__worker 5 13 none] [sequences alice 28 13 none]
+G r c none [start client__worker 5 13 none] [sequencet alice 29 13 none]
+G r c none [start client__worker 5 13 none] [distance ot 24 14 none]
+G r c none [start client__worker 5 13 none] [to_string ot__ln__utils 196 16 7_4]
+G r s twodarray [workerTK client 4 9 none] [twodarrayIP ot 16 9 none]
+G r c none [workerTK client 4 9 none] [getx alice 12 13 none]
+G r c none [workerTK client 4 9 none] [generatex alice 22 13 none]
+G r c none [workerTK client 4 9 none] [computey ot 20 13 none]
+G r c none [workerTK client 4 9 none] [to_big_unsigned ot__ln__utils 199 16 7_4]
+G r c none [workerTK client 4 9 none] [recievemessage ot 23 13 none]
+G r c none [workerTK client 4 9 none] [gety alice 14 13 none]
+G r c none [workerTK client 4 9 none] [generatey alice 24 13 none]
+G r c none [workerTK client 4 9 none] [sequences alice 28 13 none]
+G r c none [workerTK client 4 9 none] [sequencet alice 29 13 none]
+G r c none [workerTK client 4 9 none] [distance ot 24 14 none]
+G r c none [workerTK client 4 9 none] [to_string ot__ln__utils 196 16 7_4]
 X 1 ada.ads
 16K9*Ada 20e8 16|2r6 2r24 4r6 4r31
 X 5 a-inteio.ads
 18K13*Integer_Text_IO[11|46] 16|4w10 4r35
 X 10 a-textio.ads
 57K13*Text_IO 727e16 16|2w10 2r28
-264U14*New_Line 16|50s7
-465U14*Put 16|49s7 66s7
-508U14*Put_Line 16|35s7 48s7 53s7 65s7
+465U14*Put 16|97s6
+508U14*Put_Line 16|45s7 63s7 96s6
 X 14 alice.ads
-3K9*Alice 25e10 16|5w9 5r26 54r43
-9V13*getX{integer} 16|36s43
-11V13*getY{integer} 16|54s49
-17V13*GenerateX{17|9A9} 16|36s33
-19V13*GenerateY{17|9A9} 16|54s33
+3K9*Alice 35e10 16|5w9 5r26 75r33 84r33 92r68 92r130
+8i4*choiceA_value{integer} 16|92r74
+10i4*choiceB_value{integer} 16|92r136
+12V13*getX{integer} 16|46s13
+14V13*getY{integer} 16|64s12
+22V13*GenerateX{17|10A9} 16|48s33
+24V13*GenerateY{17|10A9} 16|66s33
+28V13*SequenceS{17|10A9} 16|75s39
+29V13*SequenceT{17|10A9} 16|84s39
 X 15 client.ads
-2K9*Client 9l5 9e11 16|8b14 70l5 70t11
-4t9*Worker 16|10b14 68l8 68t14
-5Y13 Start 16|20b14
+2K9*Client 9l5 9e11 16|8b14 105l5 105t11
+4t9*Worker 16|10b14 103l8 103t14
+5Y13 Start 16|28b14
 X 16 client.adb
-11r7 Address{22|598R9} 24m7 25m7 27r31
-12i7 Socket{22|412I9} 26m22 27r23 30r26
-13p7 Channel{22|1296P9} 30m7 36r23 41r31 44r28 54r23 62r29
-14a7 C{27|14A9} 44m7 49r48
-15a7 C2{27|14A9} 62m7 66r48
+11r7 Address{22|598R9} 32m7 33m7 35r31
+12i7 Socket{22|412I9} 34m22 35r23 38r26
+13p7 Channel{22|1296P9} 38m7 42r26 48r23 52r31 59r46 66r23 72r46 75r23 81r45
+. 84r23 87r46
+14i7 R{integer} 42m7 93r70
+15a7 C{27|16A9}
+16a7 C2{27|16A9}
+17a7 C3{27|16A9}
+18a7 C4{27|16A9}
+19r7 a{20|41R9[27|7]} 81m7 93r23
+20r7 b{20|41R9[27|7]} 87m7 93r27
+21r7 T{20|41R9[27|7]} 72m7 92r22
+22r7 W{20|41R9[27|7]} 59m7 92r26
+23r7 D{20|41R9[27|7]} 92m8 97r29
+24i7 x1{integer} 46m7 48r43 94r62
+25i7 y1{integer} 64m7 66r43 94r108
 X 17 common.ads
-4K9*Common 16|6w6 6r18 25r23 17|14e11
-8I12*m{integer} 16|14r21 15r22
-9A9*XY_array(integer)<integer> 16|36r7 54r7
-12N4*Port 16|25r30
+4K9*Common 16|6w6 6r18 33r23 17|15e11
+9I12*m{integer} 16|15r21 16r22 17r22 18r22
+10A9*XY_array(integer)<integer> 16|48r7 66r7 75r7 84r7
+13N4*Port 16|33r30
 X 20 crypto-types-big_numbers.ads
-41R9*Big_Unsigned 16|41r10[27|8]
-140K12*Utils 16|49r14[27|8] 49r54[27|8] 66r14[27|8] 66r55[27|8]
-196V16*To_String{string} 16|49s20[27|8] 66s20[27|8]
-199V16*To_Big_Unsigned{41R9[27|8]} 16|49s60[27|8] 66s61[27|8]
+41R9*Big_Unsigned 16|19r14[27|7] 20r14[27|7] 21r14[27|7] 22r14[27|7] 23r14[27|7]
+. 52r10[27|7]
+140K12*Utils 16|59r59[27|7] 72r59[27|7] 81r58[27|7] 87r59[27|7] 92r32[27|7]
+. 92r94[27|7] 93r34[27|7] 94r26[27|7] 94r72[27|7] 97r13[27|7]
+196V16*To_String{string} 16|97s19[27|7]
+199V16*To_Big_Unsigned{41R9[27|7]} 16|59s65[27|7] 72s65[27|7] 81s64[27|7]
+. 87s65[27|7] 92s38[27|7] 92s100[27|7] 93s40[27|7] 94s32[27|7] 94s78[27|7]
 X 21 gnat.ads
 34K9*GNAT 16|3r6 3r24 21|57e9
 X 22 g-socket.ads
@@ -179,22 +207,25 @@ X 22 g-socket.ads
 412I9*Socket_Type<integer> 16|12r18
 493I9*Port_Type<integer>
 598R9*Sock_Addr_Type 16|11r18 22|601e14
-599r7*Addr{518R9} 16|24m15
-600i7*Port{493I9} 16|25m15
-649V13*Addresses{518R9} 16|24s23
-666V13*Get_Host_By_Name{632R9} 16|24s34
-672V13*Host_Name{string} 16|24s52
-1091U14*Create_Socket 16|26s7
-1132U14*Connect_Socket 16|27s7
+599r7*Addr{518R9} 16|32m15
+600i7*Port{493I9} 16|33m15
+649V13*Addresses{518R9} 16|32s23
+666V13*Get_Host_By_Name{632R9} 16|32s34
+672V13*Host_Name{string} 16|32s52
+1091U14*Create_Socket 16|34s7
+1132U14*Connect_Socket 16|35s7
 1296P9*Stream_Access(8|39R9) 16|13r18
-1299V13*Stream{1296P9} 16|30s18
+1299V13*Stream{1296P9} 16|38s18
 X 27 ot.ads
-4K9*OT 16|5w6 5r23 41r40 49r30 66r30 27|24e7
-8K12*LN[20|39] 16|41r7 49r11 49r51 66r11 66r52
-14A9*TwoDArray(20|41R9[8])<integer><integer> 16|14r11 15r12 44r12 62r13
-18V13*computeY{20|41R9[8]} 16|41s43
-22V13*RecieveMessage{20|41R9[8]} 16|49s33 66s33
-X 43 s-stausa.ads
+4K9*OT 16|5w6 5r23 52r40 59r12 72r12 81r11 87r12 27|29e7
+7K12*LN[20|39] 16|19r11 20r11 21r11 22r11 23r11 52r7 59r56 72r56 81r55 87r56
+. 92r29 92r91 93r31 94r23 94r69 97r10
+16A9*TwoDArray(20|41R9[7])<integer><integer> 16|15r11 16r12 17r12 18r12 59r30
+. 72r30 81r29 87r30
+20V13*computeY{20|41R9[7]} 16|52s43
+23V13*RecieveMessage{20|41R9[7]} 16|59s15 72s15 81s14 87s15
+24V14*Distance{20|41R9[7]} 16|92s13
+X 44 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 
