@@ -1,9 +1,9 @@
 
 package Client is
 
-   task Worker is
+   task Reciever is
       entry Start;
 
-   end Worker;
+   end Reciever;
 
 end Client;

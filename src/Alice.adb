@@ -1,24 +1,12 @@
 
-with Ada.Text_Io;
-use Ada.Text_Io;
+with Ada.Text_Io;use Ada.Text_Io;
 with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
-with Ada.Numerics.discrete_Random;
-with Client;
+with Ada.Numerics.discrete_Random, OT, Random; use Random , OT;
+
 package body Alice
 
 is
 
-
-function RandomGen return Integer is
-   package Rand_Int is new ada.numerics.discrete_random(Rand_Range);
-   seed : Rand_Int.Generator;
-   Num : Rand_Range;
-begin
-   Rand_Int.Reset(seed);
-   Num := Rand_Int.Random(seed) ;
-
-   return Num;
-   end RandomGen;
 
 Function getX return Integer is
       x1 : Integer;
@@ -33,59 +21,32 @@ Function getY return Integer is
    begin
       Get(y1);
       return y1;
- end getY;
+   end getY;
+
+  function setChoice return LN.Big_Unsigned is
+     a : Integer;
+
+  begin
+      Get(a);
+      return LN.Utils.To_Big_Unsigned(Integer'Image(a));
+   end;
 
 
 
-   function randomA return XY_array is
-      Arr :  XY_array(m) ;
-   begin
-      for I in Arr'Range loop
-         if I = Alice.choiceA then
-            Arr(I) := RandomGen;
-           Alice.choiceA_value := Arr(I);
-         else
-            Arr(I) := RandomGen;
-         end if;
-
-      end loop;
-      return Arr;
-   end randomA;
-
-   function randomB return XY_array is
-      Arr : XY_array(m) ;
-   begin
-     for I in Arr'Range loop
-         Arr(I) := RandomGen;
-          if I = Alice.choiceB then
-            Alice.choiceB_value := Arr(I);
-         end if;
-     end loop;
-     return Arr;
-   end randomB;
-
-   function GenerateX (X : Integer) return XY_array is
-      Arr : XY_array (m);
-      Random : Integer ;
+   function GenerateX (X : LN.Big_Unsigned ; choice : LN.Big_Unsigned) return ArrUnsigned is
+      Arr : ArrUnsigned (m);
+      R : LN.Big_Unsigned ;
+      use type LN.Big_Unsigned;
    begin
 
       for I in Arr'Range loop
-         Random := RandomGen;
-      --   Put_Line(" 1st random = ");
-      --   Put(Random);
-         if I = Alice.choiceA then
-            Arr(I) := X + Random;
-            Alice.choiceA_value := Random;
-      --      Put_Line("random = ");
-      --      Put(Random);
+         R := LN.Utils.To_Big_Unsigned(Integer'Image(Random.RandomGen));
+         if LN.Utils.To_Big_Unsigned(Integer'Image(I)) = choice then
+            Arr(I) := X + R;
+            Alice.choiceA_value := R;
          else
-            Arr(I) := X + Random;
-
-
+            Arr(I) := X + R;
          end if;
-
-       --  Put_Line("Generate X result");
-         --Put(Arr(I));
       end loop;
 
       return Arr;
@@ -99,78 +60,73 @@ Function getY return Integer is
       end;
 
 
-   function GenerateY(Y : Integer) return XY_array is
-      Arr : XY_array (m);
-      Random : Integer;
+   function GenerateY(Y : LN.Big_Unsigned ; choice : LN.Big_Unsigned) return ArrUnsigned is
+      Arr : ArrUnsigned (m);
+      R : LN.Big_Unsigned ;
+      use type LN.Big_Unsigned;
    begin
 
       for I in Arr'Range loop
-         Random := RandomGen;
-       --  Put_Line(" 1st random = ");
-         --Put(Random);
-         if I = Alice.choiceB then
-            Arr(I) := Y + Random;
-            Alice.choiceB_value := Random;
-       --     Put_Line("random = ");
-         --   Put(Random);
+         R := LN.Utils.To_Big_Unsigned(Integer'Image(Random.RandomGen));
+         if LN.Utils.To_Big_Unsigned(Integer'Image(I)) = choice then
+            Arr(I) := Y + R;
+            Alice.choiceB_value := R;
          else
-            Arr(I) := Y + Random;
+            Arr(I) := Y + R;
          end if;
-
-       --  Put_Line("Generate X result");
-         --Put(Arr(I));
       end loop;
-
-
       return Arr;
    end GenerateY;
 
 
-   function SequenceS return XY_array is
-      Arr : XY_array(m);
+   function SequenceS (choice : LN.Big_Unsigned) return ArrUnsigned is
+      Arr : ArrUnsigned(m);
+        use type LN.Big_Unsigned;
    begin
       for I in Arr'Range loop
-         if I = Alice.choiceA then
+        -- R := LN.Utils.To_Big_Unsigned(Integer'Image(Random.RandomGen));
+
+         if LN.Utils.To_Big_Unsigned(Integer'Image(I)) = choice then
             Arr(I) := Alice.choiceA_value;
-            New_Line;
-        --    Put_Line("Sequence S choice a is ");
-          --  Put(Arr(I));
+           -- New_Line;
+          --  Put_Line("Sequence S choice a is ");
+           -- Put(Arr(I));
          else
-            Arr(I) := RandomGen;
-         end if;
+            Arr(I) := LN.Utils.To_Big_Unsigned(Integer'Image(Random.RandomGen)) ;
+        end if;
          end loop;
 
       return Arr;
-   end SequenceS;
+  end SequenceS;
 
-  function SequenceT return XY_array is
-      Arr : XY_array(m);
+  function SequenceT (choice : LN.Big_Unsigned) return ArrUnsigned is
+      Arr : ArrUnsigned(m);
+        use type LN.Big_Unsigned;
    begin
       for I in Arr'Range loop
-         if I = Alice.choiceB then
+
+         if LN.Utils.To_Big_Unsigned(Integer'Image(I)) = choice then
             Arr(I) := Alice.choiceB_value;
+           -- New_Line;
+          --  Put_Line("Sequence S choice a is ");
            -- Put(Arr(I));
          else
-            Arr(I) := RandomGen;
-         end if;
+            Arr(I) := LN.Utils.To_Big_Unsigned(Integer'Image(Random.RandomGen)) ;
+        end if;
       end loop;
       return Arr;
    end SequenceT;
 
- -- function Distance (T : Integer; W : Integer; choiceA: Integer;
-    --                  choiceB: Integer; a : Integer; b : Integer ;R: Integer;
-      ---               x1 : Integer; y1: Integer)
-         --             return LN.Big_Unsigned is
-     -- D : Ln.Big_Unsigned;
-      --Two : LN.Big_Unsigned ;
-      --SQRT : LN.Big_Unsigned ;
-   --begin
-     -- Two := To_Big_Unsigned("2");
-      --SQRT := To_Big_Unsigned("0.5");
-
-     -- D := LN.Utils.To_Big_Unsigned(Integer'Image(T + W  - (Alice.choiceA_value ** 2) - (choiceB_value ** 2) - (2*choiceA_value*x1) - (2*choiceB_value*y1) + a + b - R));
-     -- return D;
-  -- end Distance;
+   function Distance (T , W , choiceA, choiceB, a , b, R , x1, y1 : LN.Big_Unsigned)
+                      return LN.Big_Unsigned is
+      D : Ln.Big_Unsigned;
+      Two : LN.Big_Unsigned ;
+      use type LN.Big_Unsigned;
+   begin
+      Two := +("2");
+      D := (T + W  - (choiceA ** Two) - (choiceB ** Two) - (Two*choiceA*x1) - (Two*choiceB*y1) + a + b - R);
+      return D;
+   end Distance;
 
 
 

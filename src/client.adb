@@ -2,12 +2,12 @@
 with Ada.Text_IO;  use Ada.Text_IO;
 with GNAT.Sockets; use GNAT.Sockets;
 with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
-with OT,Alice;    use OT,Alice;
+with OT,Alice, Random;    use OT,Alice, Random;
 with Common; use Common;
 
 package body Client is
 
-   task body Worker is
+   task body Reciever is
       Address  : Sock_Addr_Type;
       Socket   : Socket_Type;
       Channel  : Stream_Access;
@@ -21,8 +21,14 @@ package body Client is
       T : Ln.Big_Unsigned;
       W : Ln.Big_Unsigned;
       D : Ln.Big_Unsigned;
-      x1 : Integer;
-      y1 : Integer;
+
+      x1 : LN.Big_Unsigned;
+      y1 : LN.Big_Unsigned;
+
+
+      -- alice is choice and random number
+      choice : LN.Big_Unsigned;
+      randomR : LN.Big_Unsigned;
 
    begin
       accept Start;
@@ -41,65 +47,67 @@ package body Client is
       -- Alice recieves Total R
       R := Integer'Input(Channel);
 
+
+       -- alice sets choice a and random R
+      Put_Line("Alice set choice");
+      choice := setChoice;
+      randomR := LN.Utils.To_Big_Unsigned("4");
+
+
       -- Alice inputs x1 and Generates sequence X and sends it to Bob
       Put_Line("Alice input x1");
-      x1 := GetX;
-     -- a := Alice.randomA
-      XY_array'Output(Channel , GenerateX(x1));
+      x1 := LN.Utils.To_Big_Unsigned(Integer'Image(GetX));
+      ArrUnsigned'Output(Channel , GenerateX(x1, choice));
 
-      --OT.RandomGen;
       --Alice sends Y to Bob
-      LN.Big_Unsigned'Output (Channel, OT.computeY);
+      LN.Big_Unsigned'Output (Channel, OT.computeY(choice, randomR));
 
       -- (Oblivious Transfer) Alice recieves C
      -- C := TwoDArray'Input(Channel);
 
 
       -- Alice computes M = a/b^r
-      W := OT.RecieveMessage(TwoDArray'Input(Channel), LN.Utils.To_Big_Unsigned("2"));
+      W := OT.RecieveMessage(TwoDArray'Input(Channel), choice, randomR);
 
 
       -- Alice inputs x1 and Generates sequence X and sends it to Bob
       Put_Line("Alice input  y1");
-      y1 :=getY ;
+      y1 :=LN.Utils.To_Big_Unsigned(Integer'Image(GetY));
 
-      XY_array'Output(Channel , GenerateY(y1));
+      ArrUnsigned'Output(Channel , GenerateY(y1 , choice));
 
       -- (Oblivious Transfer) Alice recieves C
       -- C2 := TwoDArray'Input(Channel);
 
       -- Alice computes M = a/b^r
-      T := OT.RecieveMessage(TwoDArray'Input(Channel), LN.Utils.To_Big_Unsigned("2"));
+      T := OT.RecieveMessage(TwoDArray'Input(Channel), choice, randomR);
 
       -- Alice sends Sequence A
-      XY_array'Output(Channel , Alice.SequenceS);
+       ArrUnsigned'Output(Channel , Alice.SequenceS(choice));
       -- alice recieves computed a from bob
      -- C3 := TwoDArray'Input(Channel);
 
     --  Put_Line("Chosen Sequence A is");
      -- New_Line;
-      a:= OT.RecieveMessage(TwoDArray'Input(Channel), LN.Utils.To_Big_Unsigned("2"));
+      a:= OT.RecieveMessage(TwoDArray'Input(Channel), choice, randomR);
 
       -- Alice sends Sequence b
-      XY_array'Output(Channel , Alice.SequenceT);
+       ArrUnsigned'Output(Channel , Alice.SequenceT(choice));
 
       -- alice recieves computed b from bob
-      b := OT.RecieveMessage(TwoDArray'Input(Channel), LN.Utils.To_Big_Unsigned("2"));
+      b := OT.RecieveMessage(TwoDArray'Input(Channel), choice, randomR);
 
 
 
 
-       D := Distance(T , W, LN.Utils.To_Big_Unsigned(Integer'Image(Alice.choiceA_value)), LN.Utils.To_Big_Unsigned(Integer'Image(Alice.choiceB_value))
+       D := Alice.Distance(T , W, Alice.choiceA_value, Alice.choiceB_value
                     , a , b , LN.Utils.To_Big_Unsigned(Integer'Image(R))
-                    , LN.Utils.To_Big_Unsigned(Integer'Image(x1)) , LN.Utils.To_Big_Unsigned(Integer'Image(y1)));
+                    ,x1 , y1);
 
      Put_Line("Distance is ");
      Put(LN.Utils.To_String(D));
 
 
-
-
-
-   end Worker;
+   end Reciever;
 
 end Client;

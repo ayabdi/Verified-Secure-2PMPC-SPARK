@@ -13,7 +13,7 @@ procedure Main is
 
 
    Sockets.Initialize;
-   Server.Worker.Start;
-   Server.Worker.Done;
-   Client.Worker.Start;
+   Server.Sender.Start;
+   Server.Sender.Done;
+   Client.Reciever.Start;
    end Main;

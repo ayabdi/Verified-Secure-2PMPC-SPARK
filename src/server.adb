@@ -2,14 +2,13 @@
 with Ada.Text_IO;  use Ada.Text_IO;
 with GNAT.Sockets; use GNAT.Sockets;
 with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
---with Hierarchy;    use Hierarchy;
-with Common,OT, Alice, Bob; use OT, Alice, Bob, Common;
+with Common,OT, Alice, Bob, Random; use OT, Alice, Bob, Common, Random;
 with Ada.Text_IO, Ada.Command_Line, Crypto.Types.Big_Numbers;
 pragma Elaborate_All(Crypto.Types.Big_Numbers);
 
 package body Server is
 
-   task body Worker is
+   task body Sender is
       Address : Sock_Addr_Type;
       Socket  : Socket_Type;
       Server  : Socket_Type;
@@ -20,10 +19,10 @@ package body Server is
       X2: Integer;
       Y2: Integer;
       R : XY_array(1..4);
-      Xarr : XY_array(m);
-      Yarr : XY_array(m);
-      Sarr : XY_array(m);
-      Tarr : XY_array(m);
+      Xarr : ArrUnsigned(m);
+      Yarr : ArrUnsigned(m);
+      Sarr : ArrUnsigned(m);
+      Tarr : ArrUnsigned(m);
      -- T : XY_array(m);
 
    begin
@@ -43,12 +42,12 @@ package body Server is
       -----------------------------------------------------------------------------------------------------------------------------------------
 
        -- Set Random sequence R
-      R := (2,3,4,5);
+      R := (Random.RandomGen,Random.RandomGen,Random.RandomGen,Random.RandomGen);
       -- send R total
       Integer'Output(Channel , Bob.totalR(R));
 
       -- Bob recieves Random sequence X from Alice
-      Xarr := XY_array'Input (Channel);
+      Xarr := ArrUnsigned'Input (Channel);
 
       -- Bob inputs X2
       Put_Line("Bob input x2");
@@ -64,7 +63,7 @@ package body Server is
 
       ----------------------------------------------------------------------------------------------------------------------------------------
      -- Bob recieves Random sequence Y from Alice
-      Yarr := XY_array'Input (Channel);
+      Yarr := ArrUnsigned'Input (Channel);
 
       -- Bob inputs Y2
       Put_Line("Bob input Y2");
@@ -74,17 +73,17 @@ package body Server is
       TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeT(Yarr, R(2) , Y2)));
 
       -- Bob recieves Random sequence A from Alice
-      Sarr := XY_array'Input (Channel);
+      Sarr := ArrUnsigned'Input (Channel);
 
       --Bob Computes C for SequanceA and sends it to ALice
       TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeA(Sarr, R(3) , X2)));
 
       -- Bob recieves Random sequence A from Alice
-      Tarr := XY_array'Input (Channel);
+      Tarr := ArrUnsigned'Input (Channel);
 
       --Bob Computes C for Sequance B and sends it to ALice
       TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeA(Tarr, R(4) , Y2)));
-   end Worker;
+   end Sender;
 
 
 end Server;
