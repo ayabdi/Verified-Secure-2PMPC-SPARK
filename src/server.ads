@@ -1,11 +1,11 @@
 
 package Server is
 
-   task Worker is
+   task Sender is
       entry Start;
 
       entry Done;
-   end Worker;
+   end Sender;
 
 
 end Server;

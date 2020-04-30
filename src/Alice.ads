@@ -4,32 +4,31 @@ package Alice
 
 is
 
-   choiceA : Integer := 2;
-   choiceA_value : Integer;
-   choiceB : Integer := 2;
-   choiceB_value : Integer;
+
+   choiceA_value :  LN.Big_Unsigned;
+   choiceB_value : LN.Big_Unsigned;
 
    Function getX return Integer;
 
    Function getY return Integer;
 
-   function randomA return XY_array;
+   function setChoice return LN.Big_Unsigned;
 
-   function randomB return XY_array;
+ --  function randomA return XY_array;
+
+  -- function randomB return XY_array;
 
    function storeA (a : Integer) return Integer;
 
-   function GenerateX (X : Integer ) return XY_array;
+   function GenerateX(X : LN.Big_Unsigned ; choice : LN.Big_Unsigned) return ArrUnsigned ;
 
-   function GenerateY (Y : Integer) return XY_array;
+   function GenerateY(Y : LN.Big_Unsigned ; choice : LN.Big_Unsigned) return ArrUnsigned ;
 
 
 
-   function SequenceS return XY_array;
-   function SequenceT return XY_array;
+   function SequenceS (choice : LN.Big_Unsigned) return ArrUnsigned;
+   function SequenceT (choice : LN.Big_Unsigned) return ArrUnsigned;
 
- --  function Distance (T : Integer; W : Integer; choiceA: Integer;
-   --                   choiceB: Integer; a : Integer; b : Integer; R: Integer;
-     --                x1 : Integer; y1: Integer)
-       --               return LN.Big_Unsigned;
+ function Distance (T , W , choiceA, choiceB, a , b, R , x1, y1 : LN.Big_Unsigned)
+                      return LN.Big_Unsigned;
 end Alice;

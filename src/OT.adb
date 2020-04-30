@@ -4,81 +4,66 @@ with Ada.Numerics.discrete_Random;
 with Ada.Text_IO, Ada.Command_Line, Crypto.Types.Big_Numbers;
 pragma Elaborate_All(Crypto.Types.Big_Numbers);
 
-package body OT is
+package body OT  is
 
-   p : Integer := 5;
+   --base p
+   p :  LN.Big_Unsigned := +("1565135459");
 
-   h : LN.Big_Unsigned := LN.Utils.To_Big_Unsigned("2");
-   g : LN.Big_Unsigned := LN.Utils.To_Big_Unsigned("5");
-   r : LN.Big_Unsigned := LN.Utils.To_Big_Unsigned("5");
-   a : LN.Big_Unsigned := LN.Utils.To_Big_Unsigned("2");
+   --generators
+   h : LN.Big_Unsigned := +("507035423");
+   g : LN.Big_Unsigned := +("5");
 
-function RandomGen return Integer is
-   package Rand_Int is new ada.numerics.discrete_random(Rand_Range);
-   seed : Rand_Int.Generator;
-   Num : Rand_Range;
-begin
-   Rand_Int.Reset(seed);
-   Num := Rand_Int.Random(seed);
-   return Num;
- end;
+
 
    -- reciever compute Y = g^r * h^a
 
-   function computeY return LN.Big_Unsigned is
+   function computeY (a : LN.Big_Unsigned ; r : LN.Big_Unsigned)  return LN.Big_Unsigned is
       Y : LN.Big_Unsigned;
    begin
-      Y := (g**r) * (h**a);
+      Y := LN.Mod_Utils.Pow(g,r,p) * LN.Mod_Utils.Pow(h,a,p);
       return Y;
    end;
 
 
 
-   -- random k
+   -- random k (not random yet)
    function KK return ArrUnsigned is
       K :  ArrUnsigned(m);
    begin
-      K := (To_Big_Unsigned("4"),To_Big_Unsigned("3"),To_Big_Unsigned("7"));
+      K := (+("4"),+("3"), +("7"));
 
       return K;
   end;
 
 
-   function ComputeC (Y : LN.Big_Unsigned ; MG : ArrUnsigned)return TwoDArray is
+   function ComputeC (Y : LN.Big_Unsigned; MG : ArrUnsigned )return TwoDArray is
      Z: TwoDArray(m,1..2);
      v : LN.Big_Unsigned;
      w : LN.Big_Unsigned;
    begin
      for I in Z'Range loop
-         w := g ** KK(I);
+         w := LN.Mod_Utils.Pow(g ,KK(I),p);
+
         -- Put(w);
-         v := MG(I) * ((Y/(h**To_Big_Unsigned(Integer'Image(I)))) ** KK(I));
+         v := MG(I) * LN.Mod_Utils.Pow((Y/(LN.Mod_Utils.Pow(h,To_Big_Unsigned(Integer'Image(I)),p))) , KK(I), p);
          Z(I,1) := w;
          Z(I,2) := v;
       end loop;
-      --Put_Line("Final result");
+
         return Z;
    end ComputeC;
 
 
-   function RecieveMessage (Z : TwoDArray; choice : LN.Big_Unsigned ) return LN.Big_Unsigned is
+   function RecieveMessage (Z : TwoDArray; choice : LN.Big_Unsigned ; r : LN.Big_Unsigned) return LN.Big_Unsigned is
+      X : Ln.Big_Unsigned;
+      Y : Ln.Big_Unsigned;
    begin
+    --  Put(LN.Utils.To_String(choice));
+      X := Z(Integer'Value(LN.Utils.To_String(choice)),2);
+      Y := Z(Integer'Value(LN.Utils.To_String(choice)),1);
       return
-         Z(Integer'Value(LN.Utils.To_String(choice)),2)/ (Z(Integer'Value(LN.Utils.To_String(a)),1) ** r);
+        X/LN.Mod_Utils.Pow(Y , r , p);
    end;
 
-   function Distance (T : LN.Big_Unsigned; W : LN.Big_Unsigned; choiceA: LN.Big_Unsigned;
-                      choiceB: LN.Big_Unsigned; a : LN.Big_Unsigned; b : LN.Big_Unsigned; R: LN.Big_Unsigned;
-                     x1 : LN.Big_Unsigned; y1: LN.Big_Unsigned)
-                      return LN.Big_Unsigned is
-      D : Ln.Big_Unsigned;
-      Two : LN.Big_Unsigned ;
-      --SQRT : LN.Big_Unsigned ;
-   begin
-      Two := To_Big_Unsigned("2");
-      --SQRT := To_Big_Unsigned("0.5");
 
-      D := (T + W  - (choiceA ** Two) - (choiceB ** Two) - (Two*choiceA*x1) - (Two*choiceB*y1) + a + b - R);
-      return D;
-   end Distance;
 end OT;
