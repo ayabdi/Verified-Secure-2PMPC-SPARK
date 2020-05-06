@@ -1,6 +1,6 @@
 with Ada.Numerics.discrete_Random, Common; use Common;
 
-package body Random is
+package body Random with SPARK_Mode => Off is
 
     pragma Compile_Time_Warning
      (True, "This PRNG is not cryptographically secure.");

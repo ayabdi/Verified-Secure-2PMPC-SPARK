@@ -4,7 +4,7 @@ with Ada.Numerics.discrete_Random;
 with Ada.Text_IO, Ada.Command_Line, Crypto.Types.Big_Numbers;
 pragma Elaborate_All(Crypto.Types.Big_Numbers);
 
-package body OT  is
+package body OT is
 
    --base p
    p :  LN.Big_Unsigned := +("1565135459");
@@ -17,6 +17,16 @@ package body OT  is
 
    -- reciever compute Y = g^r * h^a
 
+   function Int_to_Big (N : Integer) return LN.Big_Unsigned is
+   begin
+      return +(Integer'Image(N));
+   end;
+
+   function Big_to_Int (N : LN.Big_Unsigned) return Integer is
+   begin
+      return Integer'Value(LN.Utils.To_String(N));
+   end;
+
    function computeY (a : LN.Big_Unsigned ; r : LN.Big_Unsigned)  return LN.Big_Unsigned is
       Y : LN.Big_Unsigned;
    begin
@@ -28,7 +38,7 @@ package body OT  is
 
    -- random k (not random yet)
    function KK return ArrUnsigned is
-      K :  ArrUnsigned(m);
+      K :  ArrUnsigned;
    begin
       K := (+("4"),+("3"), +("7"));
 

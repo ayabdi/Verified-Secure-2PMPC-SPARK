@@ -12,10 +12,13 @@ package body Client is
       Socket   : Socket_Type;
       Channel  : Stream_Access;
       R : Integer;
-      C : TwoDArray(m,1..2);
-      C2 : TwoDArray(m,1..2);
-      C3 : TwoDArray(m,1..2);
-      C4 : TwoDArray(m,1..2);
+
+      XArr : ArrUnsigned ;
+      YArr: ArrUnsigned;
+      Sarr: ArrUnsigned;
+      Tarr : ArrUnsigned;
+
+
       a : Ln.Big_Unsigned;
       b : Ln.Big_Unsigned;
       T : Ln.Big_Unsigned;
@@ -28,6 +31,8 @@ package body Client is
 
       -- alice is choice and random number
       choice : LN.Big_Unsigned;
+      choiceAValue : LN.Big_Unsigned;
+      choiceBValue : LN.Big_Unsigned;
       randomR : LN.Big_Unsigned;
 
    begin
@@ -51,13 +56,18 @@ package body Client is
        -- alice sets choice a and random R
       Put_Line("Alice set choice");
       choice := setChoice;
+
       randomR := LN.Utils.To_Big_Unsigned("4");
 
+      Alice.generateRandomsXY;
 
       -- Alice inputs x1 and Generates sequence X and sends it to Bob
       Put_Line("Alice input x1");
       x1 := LN.Utils.To_Big_Unsigned(Integer'Image(GetX));
-      ArrUnsigned'Output(Channel , GenerateX(x1, choice));
+
+      GenerateX(x1,Xarr, Big_to_Int(choice), choiceAValue );
+      Put(Big_to_Int(choiceAValue));
+      ArrUnsigned'Output(Channel , Xarr);
 
       --Alice sends Y to Bob
       LN.Big_Unsigned'Output (Channel, OT.computeY(choice, randomR));
@@ -74,25 +84,30 @@ package body Client is
       Put_Line("Alice input  y1");
       y1 :=LN.Utils.To_Big_Unsigned(Integer'Image(GetY));
 
-      ArrUnsigned'Output(Channel , GenerateY(y1 , choice));
+      GenerateY(y1, Yarr, Big_to_Int(choice), choiceBValue);
+      ArrUnsigned'Output(Channel , Yarr);
 
-      -- (Oblivious Transfer) Alice recieves C
-      -- C2 := TwoDArray'Input(Channel);
 
       -- Alice computes M = a/b^r
       T := OT.RecieveMessage(TwoDArray'Input(Channel), choice, randomR);
 
+      --
+
       -- Alice sends Sequence A
-       ArrUnsigned'Output(Channel , Alice.SequenceS(choice));
+
+      Alice.SequenceT(choice, choiceAValue, Sarr);
+
+      ArrUnsigned'Output(Channel , Sarr);
       -- alice recieves computed a from bob
      -- C3 := TwoDArray'Input(Channel);
 
     --  Put_Line("Chosen Sequence A is");
      -- New_Line;
-      a:= OT.RecieveMessage(TwoDArray'Input(Channel), choice, randomR);
+       a:= OT.RecieveMessage(TwoDArray'Input(Channel), choice, randomR);
 
       -- Alice sends Sequence b
-       ArrUnsigned'Output(Channel , Alice.SequenceT(choice));
+       Alice.SequenceT(choice, choiceBValue, Tarr);
+      ArrUnsigned'Output(Channel , Tarr);
 
       -- alice recieves computed b from bob
       b := OT.RecieveMessage(TwoDArray'Input(Channel), choice, randomR);
@@ -100,9 +115,9 @@ package body Client is
 
 
 
-       D := Alice.Distance(T , W, Alice.choiceA_value, Alice.choiceB_value
+      D := Alice.Distance(T , W, choiceAvalue, choiceBvalue
                     , a , b , LN.Utils.To_Big_Unsigned(Integer'Image(R))
-                    ,x1 , y1);
+                   ,x1 , y1);
 
      Put_Line("Distance is ");
      Put(LN.Utils.To_String(D));

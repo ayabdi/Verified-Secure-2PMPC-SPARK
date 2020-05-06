@@ -19,11 +19,11 @@ package body Server is
       X2: Integer;
       Y2: Integer;
       R : XY_array(1..4);
-      Xarr : ArrUnsigned(m);
-      Yarr : ArrUnsigned(m);
-      Sarr : ArrUnsigned(m);
-      Tarr : ArrUnsigned(m);
-     -- T : XY_array(m);
+      Xarr : ArrUnsigned;
+      Yarr : ArrUnsigned;
+      Sarr : ArrUnsigned;
+      Tarr : ArrUnsigned;
+
 
    begin
       accept Start;
@@ -59,7 +59,7 @@ package body Server is
       C :=  LN.Big_Unsigned'Input (Channel);
 
       --Bob Computes C and sends it back to Y
-      TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeT(Xarr, R(1) , X2)));
+      TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeT(Xarr, Int_to_Big(R(1)) , Int_to_Big(X2))));
 
       ----------------------------------------------------------------------------------------------------------------------------------------
      -- Bob recieves Random sequence Y from Alice
@@ -70,19 +70,19 @@ package body Server is
       Y2 := Bob.GetY2;
 
       --Bob Computes C for Y and sends it to ALice
-      TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeT(Yarr, R(2) , Y2)));
+      TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeT(Yarr, Int_to_Big(R(2)) , Int_to_Big(Y2))));
 
       -- Bob recieves Random sequence A from Alice
-      Sarr := ArrUnsigned'Input (Channel);
+    Sarr := ArrUnsigned'Input (Channel);
 
       --Bob Computes C for SequanceA and sends it to ALice
-      TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeA(Sarr, R(3) , X2)));
+    TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeA(Sarr, Int_to_Big(R(3)) , Int_to_Big(X2))));
 
       -- Bob recieves Random sequence A from Alice
       Tarr := ArrUnsigned'Input (Channel);
 
       --Bob Computes C for Sequance B and sends it to ALice
-      TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeA(Tarr, R(4) , Y2)));
+     TwoDArray'Output (Channel , ComputeC(C, Bob.ComputeA(Tarr, Int_to_Big(R(4)) , Int_to_Big(Y2))));
    end Sender;
 
 
